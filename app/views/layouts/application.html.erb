@@ -17,11 +17,12 @@
     <%= link_to "アカウント作成", new_user_registration_path %>
     <%= link_to "ログイン", new_user_session_path %>
     <!--ゲストログインについてはまだ仮 -->
-    <%= link_to "ゲストログイン", new_user_session_path %>
+    <%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post %>
   <% end %>
 </header>
 
 
 <%= yield %>
+　<p class="notice"><%= notice %></p>
 </body>
 </html>
