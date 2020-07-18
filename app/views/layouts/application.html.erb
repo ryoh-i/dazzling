@@ -13,10 +13,11 @@
 <header>
   <% if user_signed_in? %>
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-  <% else %>
+    <%= link_to "口コミ一覧", posts_path %>
+    <%= link_to "新規投稿", new_post_path %>
+<% else %>
     <%= link_to "アカウント作成", new_user_registration_path %>
     <%= link_to "ログイン", new_user_session_path %>
-    <!--ゲストログインについてはまだ仮 -->
     <%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post %>
   <% end %>
 </header>
