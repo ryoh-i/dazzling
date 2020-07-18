@@ -1,2 +1,13 @@
 <h1>Posts#new</h1>
+<h2>口コミを投稿</h2>
 <p>Find me in app/views/posts/new.html.erb</p>
+
+<!--下記はまだテスト-->
+<%= form_with model: @post, local: true do |form| %>
+  <p><%= form.label :title %></p>
+  <p><%= form.text_field :title %></p>
+  <p><%= form.label :content %></p>
+  <p><%= form.text_area :content %></p>
+  <p><%= form.file_field :image %></p>
+  <%= form.submit "新規投稿"%>
+<% end %>
