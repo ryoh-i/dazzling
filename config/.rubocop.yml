@@ -26,9 +26,9 @@ AsciiComments:
 Documentation:
   Enabled: false
 
-# モジュール名::クラス名の定義を許可
+# ネスト形式を許可
 ClassAndModuleChildren:
-  Enabled: false
+  Enabled: nested
 
 # 文字リテラルのイミュータブル宣言を無視（freezeになるのはRuby3以降）
 Style/FrozenStringLiteralComment:
@@ -36,4 +36,12 @@ Style/FrozenStringLiteralComment:
 
 # 「and」「or」の使用を許可
 AndOr:
+  Enabled: false
+
+# ダブルクォートの使用を許可?
+StringLiterals:
+  EnforcedStyle: single_quotes
+
+# "Missing top-level class documentation comment."を無効
+Style/Documentation:
   Enabled: false
