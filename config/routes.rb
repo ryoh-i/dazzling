@@ -6,3 +6,7 @@ Rails.application.routes.draw do
   end
   resources :posts
 end
+
+# git stash save 7/19
+# Saved working directory and index state WIP on feature_add_user#21: 499c23a Merge pull request #20 from ryoh-i/connection_rubocop#17
+# iwataryounoMacBook-Pro:config ryo-i$
