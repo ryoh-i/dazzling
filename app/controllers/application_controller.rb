@@ -15,4 +15,4 @@ class ApplicationController < ActionController::Base
   def after_inactive_sign_up_path_for(_resource)
     posts_path
   end
-  end
+end
