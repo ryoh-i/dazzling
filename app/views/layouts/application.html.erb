@@ -15,19 +15,21 @@
     <%= link_to "ログアウト", destroy_user_session_path, class: "button", method: :delete %>
     <%= link_to "口コミ一覧", posts_path, class: "button" %>
     <%= link_to "新規投稿", new_post_path, class: "button" %>
-  <% else %>
+    <%= link_to "プロフィール編集", edit_user_registration_path, class: "button" %>
+<% else %>
     <%= link_to "アカウント作成", new_user_registration_path, class: "button" %>
     <%= link_to "ログイン", new_user_session_path, class: "button" %>
     <%= link_to "ゲストログイン", users_guest_sign_in_path, class: "button", method: :post %>
   <% end %>
-
-  <div class = "home">
+  <!--一旦コメントアウト、本来であればhome.html.erbに記述するべき-->
+  <!--<div class = "home">
     <div class="content">
       <p>画像が入らないimage_tag と background-imageで試行中</p>
     </div>
-  </div>
+  </div>-->
 
-  <%= image_tag '/assets/images/home/Home.jpg' %>
+  <!--一旦コメントアウト、本来であればhome.html.erbに記述するべき-->
+  <!--<%= image_tag '/assets/images/home/Home.jpg' %>-->
 
 </header>
 
