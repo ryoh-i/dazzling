@@ -17,7 +17,9 @@
     <%= link_to "新規投稿", new_post_path, class: "button" %>
     <%= link_to "プロフィール編集", edit_user_registration_path, class: "button" %>
     <div class="home-image">
-      <p><%= image_tag current_user.image.to_s %></p>
+      <% if current_user.image? %>
+        <p><%= image_tag current_user.image.to_s %></p>
+      <% end %>
     </div>
   <% else %>
     <%= link_to "アカウント作成", new_user_registration_path, class: "button" %>
@@ -30,9 +32,7 @@
     <div class="content">
       <p>画像が入らないimage_tag と background-imageで試行中</p>
     </div>
-  </div>
-
-  <%= image_tag '/assets/images/home/Home.jpg' %> -->
+  </div><%= image_tag '/assets/images/home/Home.jpg' %>-->
 
 </header>
 
