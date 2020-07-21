@@ -24,13 +24,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bootstrap'
 gem 'devise'
 gem 'jquery-rails'
-
-group :development do
-  gem 'rubocop', require: false
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rails', require: false
-  gem 'rubocop-rspec'
-end
+gem 'devise'
+gem 'carrierwave'
+gem 'rmagick'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

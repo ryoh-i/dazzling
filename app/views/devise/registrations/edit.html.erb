@@ -4,11 +4,6 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :name %><br/>
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
-  </div>
-
-  <div class="field">
     <%= f.label :email %><br/>
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
@@ -36,10 +31,23 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br/>
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
+  <!--画像アップロード機能、ImageUploaderで基礎設定の管理を行う-->
+  <!---->
+  <div class="edit-image">
+    <!-- <img id="image_prev" src="#" class='hidden' />-->
+    <% if current_user.persisted? && current_user.image? %>
+      <!--設定されている画像の表示-->
+      <p><%= image_tag current_user.image.to_s %></p>
+      <label><%= f.check_box :remove_image %>プロフィール画像を削除</label>
+    <% else %>
+      <!--画像が設定されていない場合(else)はdefault画像を表示(imageパラメーターに格納されている訳ではない)-->
+      <%= image_tag 'default.jpg', class: 'present_image' %>
+      <p><%= f.hidden_field :image_cache %></p>
+    <% end %>
+    <!--ファイルを選択(選択されていません or ファイル名)-->
+    <p><%= f.file_field :image, id: 'post_img' %></p>
   </div>
+
 
   <div class="actions">
     <%= f.submit "Update" %>
@@ -49,3 +57,5 @@
 <h3>Cancel my account</h3>
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: {confirm: "Are you sure?"}, method: :delete %></p>
+
+<%= link_to "Back", :back %>
