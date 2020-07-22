@@ -52,3 +52,20 @@
   /*透過の設定*/
   opacity: 0.5;
 }
+
+/*ユーザー編集ページのアイコン*/
+.edit-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/*ユーザー編集ページのアイコン*/
+.home-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
