@@ -22,10 +22,6 @@ AllCops:
 AsciiComments:
   Enabled: false
 
-# クラスのコメント必須を無視
-Documentation:
-  Enabled: false
-
 # ネスト形式を許可
 ClassAndModuleChildren:
   Enabled: nested
@@ -44,4 +40,8 @@ StringLiterals:
 
 # "Missing top-level class documentation comment."を無効
 Style/Documentation:
+  Enabled: false
+
+# クラスのコメント必須を無視
+Documentation:
   Enabled: false
