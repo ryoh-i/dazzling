@@ -22,10 +22,10 @@ gem 'uglifier', '>= 1.3.0'
 
 # original gem
 gem 'bootstrap'
+gem 'carrierwave'
+gem 'devise'
 gem 'devise'
 gem 'jquery-rails'
-gem 'devise'
-gem 'carrierwave'
 gem 'rmagick'
 
 # Use CoffeeScript for .coffee assets and views

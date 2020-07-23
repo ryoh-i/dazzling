@@ -29,7 +29,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
   # デフォルト画像は 700×700に収まるようにリサイズ
-  process :resize_to_limit => [700, 700]
+  process resize_to_limit: [700, 700]
 
   # サムネイル画像は 100×100でリサイズ
   version :thumb do
@@ -38,12 +38,12 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # 許容する拡張子
   def extension_whitelist
-    %w(jpg jpeg gif png)
+    %w[jpg jpeg gif png]
   end
 
-  #保存する際の命名規則
+  # 保存する際の命名規則
   def filename
-    "samething.jqg" if original_filename
+    'samething.jqg' if original_filename
   end
 
   protected
@@ -53,7 +53,6 @@ class ImageUploader < CarrierWave::Uploader::Base
     var = :"@#{mounted_as}_secure_token"
     model.instance_variable_get(var) or model.instance_variable_get(var, SecureRandom.uuid)
   end
-
 
   # Create different versions of your uploaded files:
   # version :thumb do
