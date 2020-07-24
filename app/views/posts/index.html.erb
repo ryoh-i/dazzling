@@ -2,7 +2,8 @@
 <h2>口コミ一覧</h2>
 <p>Find me in app/views/posts/index.html.erb</p>
 <% @post.each do |post| %>
-  <p><%= post.title %></p>
+  <p><%= link_to(post.title, "posts/#{post.id}") %></p>
   <p><%= truncate(post.content, :length => 60) %></p>
+  <img src=<%= post.image %> class="icon_image">
 <% end %>
-
+<%= paginate @post %>
