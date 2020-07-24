@@ -24,7 +24,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bootstrap'
 gem 'carrierwave'
 gem 'devise'
-gem 'devise'
 gem 'jquery-rails'
 gem 'rmagick'
 
