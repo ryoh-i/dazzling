@@ -23,9 +23,11 @@ gem 'uglifier', '>= 1.3.0'
 # original gem
 gem 'bootstrap'
 gem 'carrierwave'
+gem 'mini_magick'
 gem 'devise'
 gem 'jquery-rails'
 gem 'rmagick'
+gem 'kaminari'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
