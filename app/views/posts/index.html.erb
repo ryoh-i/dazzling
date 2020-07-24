@@ -2,7 +2,9 @@
 <h2>口コミ一覧</h2>
 <p>Find me in app/views/posts/index.html.erb</p>
 <% @post.each do |post| %>
-  <p><%= post.title %></p>
-  <p><%= truncate(post.content, :length => 60) %></p>
+  <div class="border border-secondary">
+    <p><%= post.title %></p>
+    <p><%= truncate(post.content, :length => 60) %></p>
+  </div>
 <% end %>
 
