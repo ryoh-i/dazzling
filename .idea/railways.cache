@@ -16,6 +16,7 @@
                           DELETE /users(.:format)                                                                         devise/registrations#destroy
                           POST   /users(.:format)                                                                         devise/registrations#create
       users_guest_sign_in POST   /users/guest_sign_in(.:format)                                                           devise/sessions#new_guest
+                          GET    /users/:id(.:format)                                                                     devise/registrations#show
                     posts GET    /posts(.:format)                                                                         posts#index
                           POST   /posts(.:format)                                                                         posts#create
                  new_post GET    /posts/new(.:format)                                                                     posts#new
