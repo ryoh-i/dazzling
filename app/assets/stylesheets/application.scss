@@ -16,7 +16,7 @@
 @import "bootstrap";
 
 /*header ボタン部分*/
-.button{
+.button {
   text-decoration: none;
   color: #545454;
   display: inline-block;
@@ -27,6 +27,7 @@
   transition: 0.4s;
   cursor: pointer;
 }
+
 .button:after {
   position: absolute;
   transition: 0.4s;
@@ -37,20 +38,10 @@
   height: 2px;
   background: #545454;
 }
+
 .button:hover {
   box-shadow: inset 0px 0px 0px 3px #545454;
   text-decoration: none;
-}
-
-/*header ボタン部分*/
-
-.home{
-  /*背景画像の設定*/
-  background-image: url('app/assets/images/home/Home.jpg');
-  background-size: cover;
-
-  /*透過の設定*/
-  opacity: 0.5;
 }
 
 /*ユーザー編集ページのアイコン*/
@@ -62,10 +53,9 @@
 }
 
 /*ユーザー編集ページのアイコン*/
-.home-image img {
+.edit-image img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
 }
-

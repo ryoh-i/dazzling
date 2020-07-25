@@ -26,18 +26,14 @@
     <%= link_to "ログイン", new_user_session_path, class: "button" %>
     <%= link_to "ゲストログイン", users_guest_sign_in_path, class: "button", method: :post %>
   <% end %>
-
-  <!--　下記homeに書くべき
-  <div class = "home">
-    <div class="content">
-      <p>画像が入らないimage_tag と background-imageで試行中</p>
-    </div>
-  </div><%= image_tag '/assets/images/home/Home.jpg' %>-->
-
 </header>
-
 
 <%= yield %>
 　<p class="notice"><%= notice %></p>
+
+<footer class="footer">
+  <p>dazzling</p>
+</footer>
+
 </body>
 </html>
