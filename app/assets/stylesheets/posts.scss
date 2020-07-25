@@ -1,3 +1,11 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.icon_image {
+  width: 200px;
+  height: 200px;
+  //サイズ指定
+  object-fit: cover;
+  //タテヨコ比を変えないままトリミング
+}

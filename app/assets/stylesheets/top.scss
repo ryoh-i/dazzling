@@ -5,7 +5,7 @@
 .home-img img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
   background: transparent url('Home.jpg') 0% 0% no-repeat padding-box;
   opacity: 0.5;
 }
@@ -35,6 +35,11 @@
   opacity: 1;
 }
 
-.article　p {
-  display: inline;
+.guest{
+  margin-top: 50px
+}
+
+.colour{
+  background-color: #F7F7F7;
+  border-color: #F7F7F7;
 }
