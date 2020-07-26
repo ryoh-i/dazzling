@@ -2,18 +2,22 @@
 
 class PostsController < ApplicationController
 
+  #ユーザー一覧を取得(kaminariでページネーション機能を実装)
   def index
     @post = Post.all.page(params[:page]).per(6)
   end
 
+  #ユーザー詳細情報を取得
   def show
     @post = Post.find_by(id: params[:id])
   end
 
+  #ユーザーを作成
   def new
     @post = Post.new
   end
 
+  #ユーザーを作成
   def create
     # find_or_create_by を使ってみる
     @post = Post.new(post_params)
@@ -25,11 +29,14 @@ class PostsController < ApplicationController
     end
   end
 
+  #ユーザー情報を編集する
   def edit
   end
 
   private
 
+  #送られてきたパラメーターを取得する
+  #.permitメソッドで指定された以外のカラム情報をブロックする
   def post_params
     params[:post][:user_id] = current_user.id
     params.require(:post).permit(:title, :content, :image, :review, :user_id)

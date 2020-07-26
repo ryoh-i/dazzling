@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*ホーム画面のイメージ画像の調整*/
 .home-img img {
   max-width: 100%;
   height: auto;
@@ -10,6 +11,7 @@
   opacity: 0.5;
 }
 
+/*ホーム画面のイメージ画像上のコンセプトテキストの調整*/
 .home-img p {
   position: absolute;
   white-space: nowrap;
