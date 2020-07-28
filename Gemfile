@@ -21,12 +21,17 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 
 # original gem
+# デザイン
 gem 'bootstrap'
+#画像編集
 gem 'carrierwave'
+
 gem 'mini_magick'
+#user和まり
 gem 'devise'
 gem 'jquery-rails'
 gem 'rmagick'
+#ページネーション
 gem 'kaminari'
 
 # Use CoffeeScript for .coffee assets and views
