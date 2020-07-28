@@ -27,6 +27,10 @@
     <%= link_to "アカウント作成", new_user_registration_path, class: "button" %>
     <%= link_to "ログイン", new_user_session_path, class: "button" %>
     <%= link_to "ゲストログイン", users_guest_sign_in_path, class: "button", method: :post %>
+    <%= link_to "ログアウト", destroy_user_session_path, class: "button", method: :delete %>
+    <%= link_to "口コミ一覧", posts_path, class: "button" %>
+    <%= link_to "新規投稿", new_post_path, class: "button" %>
+    <%= link_to "プロフィール編集", edit_user_registration_path, class: "button" %>
   <% end %>
   </nav>
 </header>
