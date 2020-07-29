@@ -17,7 +17,7 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-  #ユーザーを作成
+  #newアクションの後に実行される
   def create
     # find_or_create_by を使ってみる
     @post = Post.new(post_params)
@@ -37,6 +37,7 @@ class PostsController < ApplicationController
 
   #送られてきたパラメーターを取得する
   #.permitメソッドで指定された以外のカラム情報をブロックする
+  # user_idは紐付けを行っている
   def post_params
     params[:post][:user_id] = current_user.id
     params.require(:post).permit(:title, :content, :image, :review, :user_id)
