@@ -25,7 +25,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bootstrap'
 #画像編集
 gem 'carrierwave'
-
+#画像編集
 gem 'mini_magick'
 #user和まり
 gem 'devise'

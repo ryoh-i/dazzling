@@ -8,6 +8,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-
+  #アイコン画像アップロード機能
   mount_uploader :image, ImageUploader
 end
