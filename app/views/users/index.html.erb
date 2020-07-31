@@ -7,7 +7,12 @@
 <% end %>
 
 <% @users.each do |user| %>
-  <p><%= link_to user.name,user_path(user.id) %></p>
-    <p>id：<%= user.id %></p>
+<div class="card w-50">
+  <div class="card-body">
+    <h5 class="card-title"><%= link_to user.name,user_path(user.id) %></h5>
+    <p class="card-text"><%= user.id %></p>
+    <a href="#" class="btn btn-primary">ユーザープロフィールへ(まだ遷移しない)</a>
+  </div>
+</div>
 <% end %>
 <%= paginate @users %>
