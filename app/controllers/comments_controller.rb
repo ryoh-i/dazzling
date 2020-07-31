@@ -18,7 +18,6 @@ class CommentsController < ApplicationController
 
   private
 
-  # :content, :post_id, :user_id を許可
   def comment_params
     params.require(:comment).permit(:content, :post_id, :user_id)
   end
