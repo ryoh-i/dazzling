@@ -1,8 +1,8 @@
 <h1>口コミ詳細</h1>
 <p>Find me in app/views/posts/show.html.erb</p>
 
-<% 
-   if @post.image? %>
+<%
+  if @post.image? %>
   <div class="card mb-3">
     <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap">
       <title>Placeholder</title>
@@ -15,11 +15,9 @@
     <p class="card-text">T<%= @post.content %></p>
     <p class="card-text"><small class="text-muted"><%= @post.created_at %></small></p>
     <p class="card-text"><small class="text-muted">お気に入り件数：<%= @post.favorites.count %></small></p>
-    <% if current_user.already_favorited?(@post) %>
-      <%= button_to 'いいねを取り消す', post_favorite_path(@post), method: :delete %>
-    <% else %>
-      <%= button_to 'いいねを登録する', post_favorites_path(@post) %>
-    <% end %>
+    <div id="favorites_buttons_<%= @post.id %>">
+      <%= render partial: 'favorites/favorite', locals: {post: @post} %>
+    </div>
   </div>
   </div>
 <% end %>
