@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class PostsController < ApplicationController
-
   def index
     @post = Post.all.page(params[:page]).per(6)
   end
@@ -18,15 +17,14 @@ class PostsController < ApplicationController
     # find_or_create_by を使ってみる
     @post = Post.new(post_params)
     if @post.save
-      redirect_to posts_url, notice: "口コミを投稿しました"
+      redirect_to posts_url, notice: '口コミを投稿しました'
     else
       flash[:notice] = '口コミの投稿に失敗しました'
       render :new
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   private
 
