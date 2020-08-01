@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'devise/sessions#new_guest'
     get 'users/:id/show', to:'devise/registrations#show'
   end
-  resources :posts
+  resources :posts do
+  resources :favorites, only: [:create, :destroy]
+  end
 end
 
 # git stash save 7/19
