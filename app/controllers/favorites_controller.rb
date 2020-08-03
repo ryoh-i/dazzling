@@ -1,5 +1,4 @@
 class FavoritesController < ApplicationController
-
   # お気に入り
   # Favoriteモデルにuser_idとpost_idを格納
   def create
@@ -12,5 +11,4 @@ class FavoritesController < ApplicationController
     @favorite = Favorite.find_by(post_id: params[:post_id], user_id: current_user.id)
     @favorite.destroy
   end
-
 end
