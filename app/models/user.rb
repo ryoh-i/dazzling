@@ -11,13 +11,12 @@ class User < ApplicationRecord
   has_many :favorited_posts, through: :favorites, source: :post
   mount_uploader :image, ImageUploader
 
-  #ユーザーがその投稿をいいねしているかどうかを判定する
+  # ユーザーがその投稿をいいねしているかどうかを判定する
   def already_favorited?(post)
-    self.favorites.exists?(post_id: post.id)
+    favorites.exists?(post_id: post.id)
   end
 
-  #Rspecテストのため、一時的に記載
+  # Rspecテストのため、一時的に記載
   validates :name, presence: true
-  validates :profile, length: {maximum: 200}
-
+  validates :profile, length: { maximum: 200 }
 end
