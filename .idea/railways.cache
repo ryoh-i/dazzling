@@ -19,6 +19,8 @@
                           GET    /users/:id/show(.:format)                                                                devise/registrations#show
            post_favorites POST   /posts/:post_id/favorites(.:format)                                                      favorites#create
             post_favorite DELETE /posts/:post_id/favorites/:id(.:format)                                                  favorites#destroy
+       post_relationships POST   /posts/:post_id/relationships(.:format)                                                  relationships#create
+        post_relationship DELETE /posts/:post_id/relationships/:id(.:format)                                              relationships#destroy
                     posts GET    /posts(.:format)                                                                         posts#index
                           POST   /posts(.:format)                                                                         posts#create
                  new_post GET    /posts/new(.:format)                                                                     posts#new
