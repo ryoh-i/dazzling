@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class FavoritesController < ApplicationController
   # お気に入り
   # Favoriteモデルにuser_idとpost_idを格納
