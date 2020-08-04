@@ -9,8 +9,9 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     post 'users/guest_sign_in', to: 'devise/sessions#new_guest'
-    #下記showは上手くいかないActionController::UrlGenerationErrorが発生してしまう
+    #showのみPrefixが省略されていたため、asを利用し明示的に指定。
     get 'users/:id/show', to: 'devise/registrations#show', :as => :show_user_registration
+    get 'users', to:'devise/registrations#index'
   end
 
   #resources :users

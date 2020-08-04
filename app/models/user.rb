@@ -37,6 +37,6 @@ class User < ApplicationRecord
   end
 
   # Rspecテストのため、一時的に記載
-  validates :name, presence: true
+  #validates :name, presence: true
   validates :profile, length: {maximum: 200}
 end
