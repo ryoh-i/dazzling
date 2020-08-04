@@ -18,7 +18,8 @@
       <%= link_to "口コミ一覧", posts_path, class: "button" %>
       <%= link_to "新規投稿", new_post_path, class: "button" %>
       <%= link_to "プロフィール編集", edit_user_registration_path, class: "button" %>
-      <%= link_to "ユーザー詳細ページ", edit_user_registration_path, class: "button" %>
+      <%= link_to "ユーザー詳細ページ", show_user_registration_path(current_user), class: "button" %>
+      <%= link_to "登録ユーザー一覧", users_path, class: "button" %>
       <div class="home-image">
         <% if current_user.image? %>
           <p><%= image_tag current_user.image.to_s %></p>

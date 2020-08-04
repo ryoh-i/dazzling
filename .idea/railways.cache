@@ -16,7 +16,7 @@
                           DELETE /users(.:format)                                                                         devise/registrations#destroy
                           POST   /users(.:format)                                                                         devise/registrations#create
       users_guest_sign_in POST   /users/guest_sign_in(.:format)                                                           devise/sessions#new_guest
-                          GET    /users/:id/show(.:format)                                                                devise/registrations#show
+   show_user_registration GET    /users/:id/show(.:format)                                                                devise/registrations#show
            post_favorites POST   /posts/:post_id/favorites(.:format)                                                      favorites#create
             post_favorite DELETE /posts/:post_id/favorites/:id(.:format)                                                  favorites#destroy
        post_relationships POST   /posts/:post_id/relationships(.:format)                                                  relationships#create

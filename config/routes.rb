@@ -9,13 +9,15 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     post 'users/guest_sign_in', to: 'devise/sessions#new_guest'
-    get 'users/:id/show', to:'devise/registrations#show'
+    #showのみPrefixが省略されていたため、asを利用し明示的に指定。
+    get 'users/:id/show', to: 'devise/registrations#show', :as => :show_user_registration
+    get 'users', to:'devise/registrations#index'
   end
 
-
+  #resources :users
   resources :posts do
-  resources :favorites, only: [:create, :destroy]
-  resources :relationships, only: [:create, :destroy]
+    resources :favorites, only: [:create, :destroy]
+    resources :relationships, only: [:create, :destroy]
   end
 end
 
