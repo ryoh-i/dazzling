@@ -20,6 +20,7 @@
       <%= link_to "プロフィール編集", edit_user_registration_path, class: "button" %>
       <%= link_to "ユーザー詳細ページ", show_user_registration_path(current_user), class: "button" %>
       <%= link_to "登録ユーザー一覧", users_path, class: "button" %>
+      user_signed_in?は<%= user_signed_in? %>となっている
       <div class="home-image">
         <% if current_user.image? %>
           <p><%= image_tag current_user.image.to_s %></p>
@@ -30,7 +31,8 @@
     <%= link_to "アカウント作成", new_user_registration_path, class: "button" %>
     <%= link_to "ログイン", new_user_session_path, class: "button" %>
     <%= link_to "ゲストログイン", users_guest_sign_in_path, class: "button", method: :post %>
-  <% end %>
+    user_signed_in?は<%= user_signed_in? %>となっている
+<% end %>
   </nav>
 </header>
 
