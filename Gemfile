@@ -25,14 +25,25 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bootstrap'
 #画像編集
 gem 'carrierwave'
+<<<<<<< HEAD
 #画像編集
 gem 'mini_magick'
 #user和まり
+=======
+>>>>>>> master
 gem 'devise'
+gem 'factory_bot_rails'
 gem 'jquery-rails'
+<<<<<<< HEAD
 gem 'rmagick'
 #ページネーション
+=======
+>>>>>>> master
 gem 'kaminari'
+gem 'mini_magick'
+gem 'rails-controller-testing'
+gem 'rmagick'
+gem 'rspec-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

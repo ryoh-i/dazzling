@@ -1,0 +1,8 @@
+<h1>Posts#index</h1>
+<h2>ユーザー一覧</h2>
+<p>Find me in app/views/posts/index.html.erb</p>
+<% @users.each do |user| %>
+  <p>name：<%= user.name %>
+    / id：<%= user.id %></p>
+<% end %>
+<%= paginate @users %>

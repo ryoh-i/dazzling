@@ -1,3 +1,4 @@
+```ruby
 【サービス名】
 dazzling
 
