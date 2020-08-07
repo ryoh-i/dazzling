@@ -18,7 +18,7 @@
       <%= link_to "口コミ一覧", posts_path, class: "button" %>
       <%= link_to "新規投稿", new_post_path, class: "button" %>
       <%= link_to "プロフィール編集", edit_user_registration_path, class: "button" %>
-      <%= link_to "ユーザー詳細ページ", show_user_registration_path(current_user), class: "button" %>
+      <%= link_to "ユーザー詳細ページ", user_path(current_user), class: "button" %>
       <%= link_to "登録ユーザー一覧", users_path, class: "button" %>
       user_signed_in?は<%= user_signed_in? %>となっている
       current_user.(ログイン名)は<%= current_user.name %>となっている
