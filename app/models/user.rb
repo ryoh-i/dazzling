@@ -6,9 +6,9 @@ class User < ApplicationRecord
   # favorited_postsによってユーザーがどの投稿をお気に入りしているかを取得することができる
   has_many :favorited_posts, through: :favorites, source: :post
   # following_relationshipsモデルを架空で作成しており、follower_idを参考にfollowing_relationshipsモデルにアクセスするようにしている
-  has_many :following_relationships, foreign_key: "follower_id", class_name: "Relationship",  dependent: :destroy
+  has_many :following_relationships, foreign_key: 'follower_id', class_name: 'Relationship', dependent: :destroy
   has_many :following, through: :following_relationships
-  has_many :follower_relationships, foreign_key: "following_id", class_name: "Relationship", dependent: :destroy
+  has_many :follower_relationships, foreign_key: 'following_id', class_name: 'Relationship', dependent: :destroy
   has_many :followers, through: :follower_relationships
 
   # Include default devise modules. Others available are:
@@ -27,7 +27,6 @@ class User < ApplicationRecord
   def following?(user)
     following_relationships.find_by(following_id: user.id)
   end
-
 
   # フォローを実施する
   def follow(user)
