@@ -88,6 +88,13 @@ body {
   max-width: 370px;
 }
 
+.form-wrapper {
+  padding-bottom: 100px;
+  background: #fafafa;
+  margin: 3em auto;
+  max-width: 370px;
+}
+
 h1 {
   text-align: center;
   padding: 1em 0;
@@ -162,4 +169,25 @@ form {
 .remenber{
   width: 15px;
   height: 13px;
+}
+
+.signup-logo{
+  text-align:center;
+}
+
+.button-signupp .button-signupps{
+  background: #3c6f6e;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+  width: 200px;
+  margin:10px auto;
+
 }
