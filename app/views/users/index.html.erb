@@ -1,6 +1,5 @@
 <% @users.each do |user| %>
-  <p><%= link_to user.name,user_path(current_user) %></p>
+  <p><%= link_to user.name,user_path(user.id) %></p>
     <p>id：<%= user.id %></p>
 <% end %>
 <%= paginate @users %>
-
