@@ -15,3 +15,7 @@
 <div>
   <%= render "follow_form" %>
 </div>
+
+<% if current_user.name == @user.name %>
+  <%= link_to "ユーザー情報を編集する", edit_user_registration_path %>
+<% end %>
