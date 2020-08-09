@@ -25,12 +25,24 @@ class PostsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    @post = Post.find_by(id: params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      redirect_to @post, notice: '口コミ内容を編集しました'
+    else
+      render :edit, alert: '口コミ内容を編集できませんでした'
+    end
+  end
+
 
   private
 
   def post_params
     params[:post][:user_id] = current_user.id
-    params.require(:post).permit(:title, :content, :image, :user_id)
+    params.require(:post).permit(:title,:profile, :content, :image, :user_id)
   end
 end
