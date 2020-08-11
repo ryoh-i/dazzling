@@ -191,3 +191,27 @@ form {
   margin:10px auto;
 
 }
+
+.form-horizontal{
+  width: 50%;
+  margin: 10% auto;
+  min-width: 9rem;
+}
+.form-group {
+  float: left;
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background: darken(#f9f9f9, 10%);
+  color: darken(#f9f9f9, 50%);
+
+  &[type=submit] {
+    background: $green;
+    color: #fff;
+    width: auto;
+    float: right;
+  }
+}
