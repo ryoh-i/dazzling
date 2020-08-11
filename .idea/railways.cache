@@ -16,10 +16,10 @@
                           DELETE /users(.:format)                                                                         devise/registrations#destroy
                           POST   /users(.:format)                                                                         devise/registrations#create
       users_guest_sign_in POST   /users/guest_sign_in(.:format)                                                           devise/sessions#new_guest
-                    users GET    /users(.:format)                                                                         devise/registrations#index
            following_user GET    /users/:id/following(.:format)                                                           users#following
            followers_user GET    /users/:id/followers(.:format)                                                           users#followers
-                          GET    /users(.:format)                                                                         users#index
+               users_user GET    /users/:id/users(.:format)                                                               users/#index
+                    users GET    /users(.:format)                                                                         users#index
                           POST   /users(.:format)                                                                         users#create
                  new_user GET    /users/new(.:format)                                                                     users#new
                 edit_user GET    /users/:id/edit(.:format)                                                                users#edit

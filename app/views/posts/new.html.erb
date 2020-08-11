@@ -1,17 +1,15 @@
-<h1>Posts#new</h1>
-<h2>口コミを投稿</h2>
-<p>Find me in app/views/posts/new.html.erb</p>
-
-<!--下記はまだテスト-->
+<h1>口コミを投稿</h1>
 
 <%= form_with model: @post, local: true do |form| %>
   <p><%= form.label :title %></p>
-  <p><%= form.text_field :title %></p>
+  <p><%= form.text_field :title, class: "form-control form-control-lg" %></p>
   <p><%= form.label :content %></p>
-  <p><%= form.text_area :content %></p>
+  <p><%= form.text_area :content, class:"form-control" %></p>
   <div class="field">
     <%= form.label :image %><br/>
-    <%= form.file_field :image %>
+    <%= form.file_field :image, class: "btn btn-secondary" %>
   </div>
-  <%= form.submit "新規投稿"%>
+  <div class="submit-btn">
+    <%= form.submit "新規投稿" , class: "btn btn-secondary"%>
+  </div>
 <% end %>
