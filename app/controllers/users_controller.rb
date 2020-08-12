@@ -2,18 +2,22 @@
 
 class UsersController < ApplicationController
   def index
-    @users = User.all.page(params[:page]).per(6)
+    @users = User.search(params[:search]).page(params[:page]).per(5)
   end
 
   def show
     @user = User.find(params[:id])
   end
 
-  def edit; end
+  def edit
+  end
+  end
 
-  def update; end
+  def update
+  end
 
-  def destroy; end
+  def destroy
+  end
 
   def follows
     # @userがフォローしているユーザー
@@ -28,4 +32,3 @@ class UsersController < ApplicationController
     @users = @user.followers
     # render 'show_follower'
   end
-end

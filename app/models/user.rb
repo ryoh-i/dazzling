@@ -38,6 +38,18 @@ class User < ApplicationRecord
     following_relationships.find_by(following_id: user.id).destroy
   end
 
+  #絞り込み検索機能のメソッド(feature_add_serach_form#74)
+  def self.search(search)
+    if search
+      #値がsearchにあれば、nameを起点として結果を返す
+      #.pageの前はwhereなどでつなぐ必要がある
+      User.where(['name LIKE ?', "%#{search}%"])
+    else
+      #値がserrchになければ何もしない
+      User.where({})
+    end
+  end
+
   # Rspecテストのため、一時的に記載
   validates :name, presence: true
   validates :profile, length: { maximum: 200 }

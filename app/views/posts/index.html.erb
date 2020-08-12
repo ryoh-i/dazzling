@@ -1,7 +1,13 @@
-<h1>Posts#index</h1>
-<h2>口コミ一覧</h2>
-<p>Find me in app/views/posts/index.html.erb</p>
-<% @post.each do |post| %>
+<h1>口コミ一覧</h1>
+<p>検索</p>
+
+<!--bootstrapの挙動はおかしいが一旦クラスを付与-->
+<%= form_tag(posts_path, :method => 'get', class: "form-control" ) do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag 'Search', :name => nil %>
+<% end %>
+
+<% @posts.each do |post| %>
   <div class="card mb-3" style="max-width: 540px;">
     <div class="row no-gutters">
       <div class="col-md-4">
@@ -21,4 +27,4 @@
     </div>
   </div>
 <% end %>
-<%= paginate @post %>
+<%= paginate @posts %>
