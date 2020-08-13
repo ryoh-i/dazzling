@@ -9,6 +9,23 @@
   <p><%= f.text_area :content %></p>
   <p><%= f.label :image %></p>
   <p><%= f.file_field :image %></p>
+  <!--星評価機能フォーム-->
+  <div class="form-group row" id="star">
+    <%= f.label :rate, '評価', class: "col-md-3 col-form-label" %>
+    <%= f.hidden_field :rate, id: :review_star %>
+  </div>
+
+  <!--星星評価機能Javascript読み込み-->
+  <script>
+      $('#star').raty({
+          size     : 36,
+          starOff:  '<%= asset_path('star-off.png') %>',
+          starOn : '<%= asset_path('star-on.png') %>',
+          starHalf: '<%= asset_path('star-half.png') %>',
+          scoreName: 'post[rate]',
+          half: true,
+      });
+  </script>
   <%= f.submit "投稿内容を編集する"%>
 <% end %>
 
