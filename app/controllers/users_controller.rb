@@ -9,26 +9,23 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def edit
-  end
-  end
-
-  def update
+  def edit; end
   end
 
-  def destroy
-  end
+def update; end
 
-  def follows
-    # @userがフォローしているユーザー
-    @user  = User.find(params[:id])
-    @users = @user.following
-    # render 'show_follow'
-  end
+def destroy; end
 
-  def followers
-    # @userをフォローしているユーザー
-    @user  = User.find(params[:id])
-    @users = @user.followers
-    # render 'show_follower'
-  end
+def follows
+  # @userがフォローしているユーザー
+  @user  = User.find(params[:id])
+  @users = @user.following
+  # render 'show_follow'
+end
+
+def followers
+  # @userをフォローしているユーザー
+  @user  = User.find(params[:id])
+  @users = @user.followers
+  # render 'show_follower'
+end

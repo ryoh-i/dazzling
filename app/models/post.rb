@@ -11,13 +11,12 @@ class Post < ApplicationRecord
 
   def self.search(search)
     if search
-      #値がsearchにあれば結果を返す
-      #.pageの前はwhereなどでつなぐ必要がある
+      # 値がsearchにあれば結果を返す
+      # .pageの前はwhereなどでつなぐ必要がある
       Post.where(['content LIKE ?', "%#{search}%"])
     else
-      #値がserrchになければ何もしない
+      # 値がserrchになければ何もしない
       Post.where({})
     end
   end
-
 end
