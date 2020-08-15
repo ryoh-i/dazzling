@@ -11,7 +11,7 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @favorite = Favorite.new
     @comment = Comment.new
-    @comment = @post.comments.order(create_at: :desc)
+    @comments = @post.comments
   end
 
   def new
