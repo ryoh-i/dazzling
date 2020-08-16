@@ -5,14 +5,14 @@
     <li class="comment-container">
       <div class="comment-box">
         <div class="comment-avatar">
-          <%= attachment_image_tag comment.user, :profile_image, fallback: "no_image.jpg", class:"comment-image", size: "40x40" %>
+          <%= image_tag comment.user, :profile_image, fallback: "no_image.jpg", class:"comment-image", size: "40x40" %>
         </div>
         <div class="comment-text">
           <p><%= link_to "@#{comment.user.name}", users_user_path(comment.user.id) %></p>
           <div class="comment-entry">
             <%= comment.content %>
             <% if comment.user == current_user %>
-              <%= link_to item_comment_path(comment.item_id, comment.id), method: :delete, remote: true, class: "comment_destroy" do %>
+              <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true, class: "comment_destroy" do %>
                 <i class="fas fa-trash" style="color: black;"></i>
               <% end %>
             <% end %>
@@ -32,14 +32,14 @@
       <li class="comment-container">
         <div class="comment-box">
           <div class="comment-avatar">
-            <%= attachment_image_tag comment.user, :profile_image, fallback: "no_image.jpg", class:"comment-image", size: "40x40" %>
+            <%= image_tag comment.user, :profile_image, fallback: "no_image.jpg", class:"comment-image", size: "40x40" %>
           </div>
           <div class="comment-text">
             <p><%= link_to "@#{comment.user.name}", users_user_path(comment.user.id) %></p>
             <div class="comment-entry">
               <%= comment.content %>
               <% if comment.user == current_user %>
-                <%= link_to item_comment_path(comment.item_id, comment.id), method: :delete, remote: true, class: "comment_destroy" do %>
+                <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true, class: "comment_destroy" do %>
                   <i class="fas fa-trash" style="color: black;"></i>
                 <% end %>
               <% end %>
