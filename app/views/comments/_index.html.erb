@@ -5,7 +5,7 @@
     <li class="comment-container">
       <div class="comment-box">
         <div class="comment-avatar">
-          <%= image_tag comment.user, :profile_image, fallback: "no_image.jpg", class:"comment-image", size: "40x40" %>
+          <!--%= image_tag comment.user, :profile_image, fallback: "no_image.jpg", class:"comment-image", size: "40x40" %-->
         </div>
         <div class="comment-text">
           <p><%= link_to "@#{comment.user.name}", users_user_path(comment.user.id) %></p>
@@ -32,7 +32,7 @@
       <li class="comment-container">
         <div class="comment-box">
           <div class="comment-avatar">
-            <%= image_tag comment.user, :profile_image, fallback: "no_image.jpg", class:"comment-image", size: "40x40" %>
+            <!--%= image_tag comment.user, :profile_image, fallback: "no_image.jpg", class:"comment-image", size: "40x40" %-->
           </div>
           <div class="comment-text">
             <p><%= link_to "@#{comment.user.name}", users_user_path(comment.user.id) %></p>
