@@ -24,7 +24,9 @@
       current_user.(ログイン名)は<%= current_user.name %>となっている
       <div class="home-image">
         <% if current_user.image? %>
+          <div class="edit-image">
           <p><%= image_tag current_user.image.to_s %></p>
+          </div>
         <% end %>
       </div>
   <% else %>
