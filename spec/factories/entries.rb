@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :entrie do
+  factory :entry do
     user { nil }
     room { nil }
   end
