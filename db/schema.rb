@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_18_143159) do
+ActiveRecord::Schema.define(version: 2020_08_19_144013) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content"
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(version: 2020_08_18_143159) do
     t.datetime "updated_at", null: false
     t.index ["room_id"], name: "index_entries_on_room_id"
     t.index ["user_id"], name: "index_entries_on_user_id"
+  end
+
+  create_table "entrys", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "room_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_entrys_on_room_id"
+    t.index ["user_id"], name: "index_entrys_on_user_id"
   end
 
   create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -91,6 +100,8 @@ ActiveRecord::Schema.define(version: 2020_08_18_143159) do
 
   add_foreign_key "entries", "rooms"
   add_foreign_key "entries", "users"
+  add_foreign_key "entrys", "rooms"
+  add_foreign_key "entrys", "users"
   add_foreign_key "favorites", "posts"
   add_foreign_key "favorites", "users"
   add_foreign_key "messages", "rooms"
