@@ -5,7 +5,7 @@
 <% @entries.each do |e| %>
   <div class="user-name">
     <strong>
-      <%= image_tag e.user.image, class:"user-image" %>
+      <%= image_tag current_user.image.to_s, class:"user-image" %>
       <a class="rooms-user-link" href="/users/<%= e.user.id %>">
         <%= e.user.name %>さん
       </a>
