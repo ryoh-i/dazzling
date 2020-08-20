@@ -24,16 +24,16 @@
 <!--ログインユーザーでなければ、true-->
 <% unless @user.id == current_user.id %>
   <!--お互いにフォローされていれば、true-->
-  <% if (current_user.followed_by? @user) && (@user.followed_by? current_user) %>
+  <% if (current_user.following? @user) && (@user.following? current_user) %>
     <% if @isRoom == true %>
       <p class="user-show-room"><a href="/rooms/<%= @roomId %>" class="btn btn-primary btn-lg">チャットへ</a>
     <% else %>
       <!--一旦、form_forで実装するが、後程form_withで実装する-->
-      <% form_for @room do |f| %>
+      <%= form_for @room do |f| %>
         <%= fields_for @entry do |e| %>
           <%= e.hidden_field :user_id, value: @user.id %>
         <% end %>
-        <%= f.submit "チャットをはじめる", class: "btn btn-primary btn-log user-show-chat" %>
+        <%= f.submit "チャットを始める", class: "btn btn-primary btn-lg user-show-chat" %>
       <% end %>
     <% end %>
   <% end %>
