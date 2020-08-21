@@ -1,6 +1,6 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
-<%= @user.name  %>
+<%= @user.name %>
 
 <div class="follower">
   <%= link_to followers_user_path(@user.id) do %>
@@ -18,4 +18,23 @@
 
 <% if current_user.id == @user.id %>
   <%= link_to "ユーザー情報を編集する", edit_user_registration_path %>
+<% end %>
+
+<!--ダイレクトメッセージ機能-->
+<!--ログインユーザーでなければ、true-->
+<% unless @user.id == current_user.id %>
+  <!--お互いにフォローされていれば、true-->
+  <% if (current_user.following? @user) && (@user.following? current_user) %>
+    <% if @isRoom == true %>
+      <p class="user-show-room"><a href="/rooms/<%= @roomId %>" class="btn btn-primary btn-lg">チャットへ</a>
+    <% else %>
+      <!--一旦、form_forで実装するが、後程form_withで実装する-->
+      <%= form_for @room do |f| %>
+        <%= fields_for @entry do |e| %>
+          <%= e.hidden_field :user_id, value: @user.id %>
+        <% end %>
+        <%= f.submit "チャットを始める", class: "btn btn-primary btn-lg user-show-chat" %>
+      <% end %>
+    <% end %>
+  <% end %>
 <% end %>

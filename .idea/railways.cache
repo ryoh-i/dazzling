@@ -31,6 +31,8 @@
              relationship DELETE /relationships/:id(.:format)                                                             relationships#destroy
            post_favorites POST   /posts/:post_id/favorites(.:format)                                                      favorites#create
             post_favorite DELETE /posts/:post_id/favorites/:id(.:format)                                                  favorites#destroy
+            post_comments POST   /posts/:post_id/comments(.:format)                                                       comments#create
+             post_comment DELETE /posts/:post_id/comments/:id(.:format)                                                   comments#destroy
                     posts GET    /posts(.:format)                                                                         posts#index
                           POST   /posts(.:format)                                                                         posts#create
                  new_post GET    /posts/new(.:format)                                                                     posts#new

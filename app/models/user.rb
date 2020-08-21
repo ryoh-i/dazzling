@@ -4,7 +4,6 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :comments, dependent: :destroy
-
   # favorited_postsによってユーザーがどの投稿をお気に入りしているかを取得することができる
   has_many :favorited_posts, through: :favorites, source: :post
 
@@ -14,7 +13,6 @@ class User < ApplicationRecord
   has_many :follower_relationships, foreign_key: 'following_id', class_name: 'Relationship', dependent: :destroy
   has_many :followers, through: :follower_relationships
 
-  #ダイレクトメッセージ機能
   has_many :messages, dependent: :destroy
   has_many :entries, dependent: :destroy
 
