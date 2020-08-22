@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    #「チャットへ」を押したユーザーとホストユーザーをwhereで探してEntriesテーブルに記録する
+    # 「チャットへ」を押したユーザーとホストユーザーをwhereで探してEntriesテーブルに記録する
     @currentUserEntry = Entry.where(user_id: current_user.id)
     @userEntry = Entry.where(user_id: @user.id)
     # ログインユーザーでなければ、true
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
       @currentUserEntry.each do |cu|
         @userEntry.each do |u|
           # roomが作成されていれば、true
-          if cu.room_id == u.room_id then
+          if cu.room_id == u.room_id
             @isRoom = true
             @roomId = cu.room_id
           end
@@ -29,15 +29,11 @@ class UsersController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
-  def update
+  def update; end
 
-  end
-
-  def destroy
-  end
+  def destroy; end
 
   def follows
     # @userがフォローしているユーザー
