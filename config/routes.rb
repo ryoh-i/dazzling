@@ -20,14 +20,15 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :relationships, only: [:create, :destroy]
-  resources :messages, only: [:create]
-  resources :rooms, only: [:create,:show]
-
   resources :posts do
     resource :favorites, only: [:create, :destroy]
     resources :comments, only: [:create, :destroy]
   end
+
+  resources :relationships, only: [:create, :destroy]
+  resources :messages, only: [:create]
+  resources :rooms, only: [:create,:show]
+
 end
 
 # git stash save 7/19
