@@ -39,11 +39,7 @@
       <p><%= f.hidden_field :image_cache %></p>
       <p><%= f.file_field :image, id: 'post_img' %></p>
     </div>
+    <%= f.submit "Sign up" %>
     </div>
-
-    <div class="actions">
-      <%= f.submit "Sign up" %>
-    </div>
-    <%= render "devise/shared/links" %>
   <% end %>
 
