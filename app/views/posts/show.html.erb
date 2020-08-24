@@ -35,6 +35,7 @@
   </div>
 <% end %>
 
+<!--投稿に紐づいたユーザーとログインユーザーが同一であれば、True-->
 <% if @post.user_id == current_user.id %>
   <%= link_to "投稿を編集する", edit_post_path(@post.id) %>
   <%= link_to "削除する", post_path(@post.id), method: :delete %>
