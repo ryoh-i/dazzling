@@ -50,7 +50,7 @@ class PostsController < ApplicationController
 
   # 投稿削除のアクション
   def destroy
-    @post = Post.find(id: params[:id])
+    @post = Post.find_by(id: params[:id])
     if @post.user_id == current_user.id
       if @post.destroy
         redirect_to posts_path, notice: '投稿を削除しました'
@@ -59,6 +59,7 @@ class PostsController < ApplicationController
       end
     end
   end
+
 
   private
 
