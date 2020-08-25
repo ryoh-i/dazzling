@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CommentsController < ApplicationController
   # レビュー用のコメント作成のアクション
   def create
