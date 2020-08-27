@@ -31,6 +31,10 @@ gem 'mini_magick'
 gem 'rails-controller-testing'
 gem 'rmagick'
 gem 'rspec-rails'
+gem "gmaps4rails"
+gem "geocoder"
+gem "gon"
+gem "dotenv-rails"
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
