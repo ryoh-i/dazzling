@@ -24,17 +24,17 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bootstrap'
 gem 'carrierwave'
 gem 'devise'
+gem 'dotenv-rails'
 gem 'factory_bot_rails'
+gem 'geocoder'
+gem 'gmaps4rails'
+gem 'gon'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'mini_magick'
 gem 'rails-controller-testing'
 gem 'rmagick'
 gem 'rspec-rails'
-gem "gmaps4rails"
-gem "geocoder"
-gem "gon"
-gem "dotenv-rails"
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
