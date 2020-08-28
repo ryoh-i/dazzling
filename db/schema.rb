@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_22_144631) do
+ActiveRecord::Schema.define(version: 2020_08_27_144109) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content"
@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(version: 2020_08_22_144631) do
     t.integer "user_id"
     t.string "profile"
     t.float "rate"
+    t.text "text"
   end
 
   create_table "relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -85,6 +86,16 @@ ActiveRecord::Schema.define(version: 2020_08_22_144631) do
     t.index ["user_id"], name: "index_rooms_on_user_id"
   end
 
+  create_table "spots", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
+    t.bigint "review_id_id"
+    t.index ["review_id_id"], name: "index_spots_on_review_id_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -97,6 +108,7 @@ ActiveRecord::Schema.define(version: 2020_08_22_144631) do
     t.text "profile"
     t.string "image"
     t.text "content"
+    t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
