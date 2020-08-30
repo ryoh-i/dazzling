@@ -130,5 +130,5 @@ build-iPhoneSimulator/
 # .rubocop-https?--*
 
 # End of https://www.toptal.com/developers/gitignore/api/rails,ruby
-
-/server/mysql
+/server/mysql/*
+.idea
