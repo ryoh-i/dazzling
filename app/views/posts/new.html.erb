@@ -5,6 +5,15 @@
   <p><%= f.text_field :title, class: "f-control f-control-lg" %></p>
   <p><%= f.label :content %></p>
   <p><%= f.text_area :content, class: "f-control" %></p>
+
+  <div class="spot">
+  <p><%= f.label :address,"レビュー場所(Google Mapで検索)", class: "spot__title" %></p>
+  <p><%= f.text_field :address, placeholder: "スポットを入力", id: "address", class: "spot__text"%></p>
+    <input onclick="codeAddress()" type="button" value="検索する"></input>
+    <div class="map" id="map" style="height: 320px; width: 640px;"></div>
+  </div>
+
+
   <div class="field">
     <%= f.label :image %><br/>
     <%= f.file_field :image, class: "btn btn-secondary" %>
