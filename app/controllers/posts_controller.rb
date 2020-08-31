@@ -19,6 +19,8 @@ class PostsController < ApplicationController
   # 投稿新規ページのアクション
   def new
     @post = Post.new
+    # @post = Review.new
+    # @post.build_spot
   end
 
   # 投稿更新ページのアクション
