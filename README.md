@@ -28,6 +28,7 @@ mysql  Ver 8.0.17 for osx10.14 on x86_64 (Homebrew)
 ・フォロー機能(Ajax　非同期処理)
 ・ダイレクトメッセージ機能
 ・キーワード検索機能
+・タグ機能(acts-as-taggable-on)
 ・都道府県絞り込み機能(Google map API)
 ・地図検索機能(Google map API)
 
