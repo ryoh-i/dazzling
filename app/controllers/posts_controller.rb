@@ -8,7 +8,11 @@ class PostsController < ApplicationController
     @posts = Post.search(params[:search]).page(params[:page]).per(6)
   end
 
+<<<<<<< HEAD
   # 投稿詳細ページのアクション
+=======
+  #ユーザー詳細情報を取得
+>>>>>>> c4a926c898ddf6ef0d468de5a3590140576f9fa6
   def show
     @post = Post.find_by(id: params[:id])
     @favorite = Favorite.new
@@ -16,14 +20,22 @@ class PostsController < ApplicationController
     @comments = @post.comments
   end
 
+<<<<<<< HEAD
   # 投稿新規ページのアクション
+=======
+  #ユーザーを作成
+>>>>>>> c4a926c898ddf6ef0d468de5a3590140576f9fa6
   def new
     @post = Post.new
     # @post = Review.new
     # @post.build_spot
   end
 
+<<<<<<< HEAD
   # 投稿更新ページのアクション
+=======
+  #newアクションの後に実行される
+>>>>>>> c4a926c898ddf6ef0d468de5a3590140576f9fa6
   def create
     # find_or_create_by を使ってみる
     @post = Post.new(post_params)
@@ -64,6 +76,9 @@ class PostsController < ApplicationController
 
   private
 
+  #送られてきたパラメーターを取得する
+  #.permitメソッドで指定された以外のカラム情報をブロックする
+  # user_idは紐付けを行っている
   def post_params
     params[:post][:user_id] = current_user.id
     params.require(:post).permit(:title, :profile, :content, :image, :user_id, :rate, :text, spot_attributes: [:address])
