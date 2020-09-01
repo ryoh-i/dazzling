@@ -5,6 +5,8 @@
   <p><%= f.text_field :title, class: "f-control f-control-lg" %></p>
   <p><%= f.label :content %></p>
   <p><%= f.text_area :content, class: "f-control" %></p>
+  <p><%= f.label :post, :tag_list %></p>
+  <p><%= f.text_field :tag_list, value: @post.tag_list.join(','), class: "form-control" %></p>
 
   <div class="spot">
   <p><%= f.label :address,"レビュー場所(Google Mapで検索)", class: "spot__title" %></p>

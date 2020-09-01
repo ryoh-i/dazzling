@@ -1,11 +1,12 @@
 <h1>口コミ一覧</h1>
 <p>検索</p>
 
-<!--bootstrapの挙動はおかしいが一旦クラスを付与-->
-<%= form_tag(posts_path, :method => 'get', class: "form-control" ) do %>
+<!--キーワード絞り込み機能フォーム-->
+<%= form_tag(posts_path, :method => 'get', class: "form-control") do %>
   <%= text_field_tag :search %>
   <%= submit_tag 'Search', :name => nil %>
 <% end %>
+<!--キーワード絞り込み機能フォームここまで-->
 
 <% @posts.each do |post| %>
   <div class="card mb-3" style="max-width: 1500px;">
@@ -24,21 +25,30 @@
           <p class="card-text"><small class="text-muted"><%= post.created_at %></small></p>
         </div>
       </div>
+      <!--タグ表示-->
+      <% post.tag_list.each do |tag| %>
+        <%= link_to tag, posts_path(tag_name: tag) %>
+      <% end %>
+      <!--タグ表示ここまで-->
     </div>
+
     <!--星評価機能表示-->
     <div id="star-rate-<%= post.id %>"></div>
     <script>
         $('#star-rate-<%= post.id %>').raty({
             size: 36,
-            starOff:  '<%= asset_path('star-off.png') %>',
-            starOn : '<%= asset_path('star-on.png') %>',
+            starOff: '<%= asset_path('star-off.png') %>',
+            starOn: '<%= asset_path('star-on.png') %>',
             starHalf: '<%= asset_path('star-half.png') %>',
             half: true,
             readOnly: true,
             score: <%= post.rate %>,
         });
     </script>
-    <!--星評価機能表示ここまで-->
   </div>
+  <!--星評価機能表示ここまで-->
+
 <% end %>
+
+<!--kaminari ページネーション機能-->
 <%= paginate @posts %>
