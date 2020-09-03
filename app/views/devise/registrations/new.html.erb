@@ -17,7 +17,28 @@
    <div class="form-group">
      <%= f.label :profile %><br/>
      <%= f.text_area :profile, autofocus: true, autocomplete: "profile",class: "form-control", id: "exampleFormControlTextarea1", rows: "3", placeholder: "この度は大変お忙しい中、当ポートフォリオまで足を運んでいただき誠にありがとうございます。"  %>
-     <small id="emailHelp" class="form-text text-muted">※200文字以下</small>
    </div>
 
-<% end %>
+   <div class="form-group">
+     <%= f.label :password %>
+     <%= f.password_field :password, class: "form-control", id: "exampleInputPassword1", placeholder: "Password", autocomplete: "new-password" %>
+     <small id="emailHelp" class="form-text text-muted">※6文字以上</small>
+   </div>
+
+   <div class="form-group">
+     <%= f.label :password_confirmation %><br/>
+     <%= f.password_field :password_confirmation, class: "form-control", id: "exampleInputPassword1", placeholder: "Password", autocomplete: "new-password" %>
+     <small id="emailHelp" class="form-text text-muted">※パスワード確認</small>
+   </div>
+
+   <div class="edit-image">
+     <%= image_tag 'default.jpg', class: 'present_image' %>
+     <p><%= f.hidden_field :image_cache %></p>
+     <p><%= f.file_field :image, id: 'post_img' %></p>
+     <small id="emailHelp" class="form-text text-muted">※プロフィール画像設定</small>
+   </div>
+
+   <div class="login-btn">
+     <%= f.submit "アカウント作成", class: "btn btn-primary" %>
+   </div>
+ <% end %>
