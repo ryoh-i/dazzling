@@ -3,10 +3,11 @@
 class PostsController < ApplicationController
   # 投稿一覧のアクション
   def index
-    # 　@posts = Post.all.page(params[:page]).per(10)
+    # @posts = Post.all.page(params[:page]).per(10)
     # 上記では、検索機能で絞ることはできていないため、以下のようにpost.rbのsearchを使って絞る。
     @posts = Post.search(params[:search]).page(params[:page]).per(6)
 
+    # タグにて絞り込み
     if params[:tag_name]
       @posts = Post.tagged_with("#{params[:tag_name]}").page(params[:page]).per(6)
     end
