@@ -1,6 +1,16 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
+  before_action :current_user
+
+  #ログインしているユーザー情報を取得。
+  # もし、session[:user_id]がnillであればreturn
+  # session[:user_id]がtrueであれば、ユーザー情報を@current_userに代入
+  def current_user
+    return unless session[:user_id]
+    @current_user ||= User.find(session[:user_id])
+  end
+
   # ログイン後のリダイレクト先変更のため、devise/controllers/helpers.rbに定義してあるメソッドをオーバーライド
   def after_sign_in_path_for(_resource_or_scope)
     posts_path

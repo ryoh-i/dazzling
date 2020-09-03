@@ -14,6 +14,7 @@ class PostsController < ApplicationController
   end
 
   # 投稿詳細ページのアクション
+  #ユーザー詳細情報を取得
   def show
     @post = Post.find_by(id: params[:id])
     @favorite = Favorite.new
@@ -22,6 +23,7 @@ class PostsController < ApplicationController
   end
 
   # 投稿新規ページのアクション
+  #ユーザーを作成
   def new
     @post = Post.new
     # @post = Review.new
@@ -29,6 +31,7 @@ class PostsController < ApplicationController
   end
 
   # 投稿更新ページのアクション
+  #newアクションの後に実行される
   def create
     # find_or_create_by を使ってみる
     @post = Post.new(post_params)
@@ -69,6 +72,9 @@ class PostsController < ApplicationController
 
   private
 
+  #送られてきたパラメーターを取得する
+  #.permitメソッドで指定された以外のカラム情報をブロックする
+  # user_idは紐付けを行っている
   def post_params
     params[:post][:user_id] = current_user.id
     params.require(:post).permit(:title, :profile, :content, :image, :user_id, :rate, :text, :tag_list, spot_attributes: [:address])
