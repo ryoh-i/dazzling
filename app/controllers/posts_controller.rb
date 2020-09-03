@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     @posts = Post.search(params[:search]).page(params[:page]).per(6)
 
     if params[:tag_name]
-      @posts = Post.search(params[:search]).page("#{params[:tag_name]}").per(6)
+      @posts = Post.tagged_with("#{params[:tag_name]}").page(params[:page]).per(6)
     end
 
   end
