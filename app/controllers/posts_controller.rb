@@ -20,8 +20,8 @@ class PostsController < ApplicationController
     @favorite = Favorite.new
     @comment = Comment.new
     @comments = @post.comments
-    #@lat = @post.spot.latitude
-    #@lng = @post.spot.longitude
+    @lat = @post.spot.latitude
+    @lng = @post.spot.longitude
     gon.lat = @lat
     gon.lng = @lng
   end
