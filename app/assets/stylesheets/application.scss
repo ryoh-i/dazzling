@@ -60,6 +60,24 @@
   object-fit: cover;
 }
 
+/*ホームページ3点アイコン*/
+.image-homes {
+  width: 80px;
+  height: 80px;
+}
+
+/*ログインページのチェックボックス*/
+.new-html-erb-checkbox {
+  padding-left: 5px;
+  margin-left: 0px;
+  left: 10px;
+}
+
+/*ログインページのログインボタン*/
+.login-btn {
+  text-align: center;
+}
+
 /*ログインページ*/
 /* Fonts */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
@@ -71,7 +89,11 @@
 }
 
 /* Simple Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /* body */
 body {
@@ -131,25 +153,6 @@ form {
   width: 100%;
 }
 
-.button-signup .button-signups{
-  background: #3c6f6e;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  height: 50px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.2em;
-  letter-spacing: 0.05em;
-  text-align: center;
-  text-transform: uppercase;
-  transition: background 0.3s ease-in-out;
-  width: 100%;
-}
-
-.button-signups:hover {
-  background: #000000;
-}
-
 .form-footer {
   font-size: 1em;
   padding: 2em 0;
@@ -166,16 +169,16 @@ form {
   border-bottom: 1px dotted #8c8c8c;
 }
 
-.remenber{
+.remenber {
   width: 15px;
   height: 13px;
 }
 
-.signup-logo{
-  text-align:center;
+.signup-logo {
+  text-align: center;
 }
 
-.button-signupp .button-signupps{
+.button-signupp .button-signupps {
   background: #3c6f6e;
   border: none;
   color: #fff;
@@ -188,15 +191,16 @@ form {
   text-transform: uppercase;
   transition: background 0.3s ease-in-out;
   width: 200px;
-  margin:10px auto;
+  margin: 10px auto;
 
 }
 
-.form-horizontal{
+.form-horizontal {
   width: 50%;
   margin: 10% auto;
   min-width: 9rem;
 }
+
 .form-group {
   float: left;
   width: 100%;
