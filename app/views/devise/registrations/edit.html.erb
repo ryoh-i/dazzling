@@ -1,39 +1,41 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h1>プロフィール編集</h1>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %><br/>
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control", id: "formGroupExampleInput", placeholder: "イワタリョウ" %>
   </div>
 
-  <div class="field">
-    <%= f.label :profile %><br />
-    <%= f.text_area :profile, autofocus: true, autocomplete: "profile" %>
+  <div class="form-group">
+    <%= f.label :profile %><br/>
+    <%= f.text_area :profile, autofocus: true, autocomplete: "profile", class: "form-control", id: "exampleFormControlTextarea1", rows: "3", placeholder: "この度は大変お忙しい中、当ポートフォリオまで足を運んでいただき誠にありがとうございます。" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :email %><br/>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, class: "form-control", id: "exampleInputEmail1", placeholder: "example@email.com", autocomplete: "email" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br/>
-    <%= f.password_field :password, autocomplete: "new-password" %>
+  <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password, class: "form-control", id: "exampleInputPassword1", placeholder: "Password", autocomplete: "new-password" %>
+    <small id="emailHelp" class="form-text text-muted">※変更しない場合は空白のままにしてください</small>
     <% if @minimum_password_length %>
       <br/>
       <em><%= @minimum_password_length %> characters minimum</em>
     <% end %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :password_confirmation %><br/>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, class: "form-control", id: "exampleInputPassword1", placeholder: "Password", autocomplete: "new-password" %>
+    <small id="emailHelp" class="form-text text-muted">※パスワード確認</small>
   </div>
 
   <!--画像アップロード機能、ImageUploaderで基礎設定の管理を行う-->
@@ -42,7 +44,7 @@
     <!-- <img id="image_prev" src="#" class='hidden' />-->
     <% if current_user.persisted? && current_user.image? %>
       <!--設定されている画像の表示-->
-      <p><%= image_tag current_user.image.to_s %></p>
+        <p><%= image_tag current_user.image.to_s %></p>
       <label><%= f.check_box :remove_image %>プロフィール画像を削除</label>
     <% else %>
       <!--画像が設定されていない場合(else)はdefault画像を表示(imageパラメーターに格納されている訳ではない)-->
@@ -51,16 +53,20 @@
     <% end %>
     <!--ファイルを選択(選択されていません or ファイル名)-->
     <p><%= f.file_field :image, id: 'post_img' %></p>
+    <small id="emailHelp" class="form-text text-muted">※プロフィール画像を設定できます</small>
   </div>
-
-
-  <div class="actions">
-    <%= f.submit "Update" %>
+  <!--現在、rootがhomeのためuser/showには戻らない-->
+  <div class="user-edit-btn">
+    <%= f.submit "プロフィールを更新", class: "btn btn-primary" %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
+<div style="text-align: right">
+<%= button_to "アカウント削除", registration_path(resource_name), data: {confirm: "Are you sure?"}, method: :delete %>
+</div>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: {confirm: "Are you sure?"}, method: :delete %></p>
+<!--現在、rootがhomeのためindexには戻らない-->
+<div class="user-edit-btn">
+  <%= link_to "ホームへ戻る", :back %>
+</div>
 
-<%= link_to "Back", :back %>
