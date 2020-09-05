@@ -37,6 +37,7 @@ gem 'rmagick'
 gem 'rspec-rails'
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'underscore-rails'
+gem 'rails-i18n'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
