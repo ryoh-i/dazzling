@@ -20,13 +20,17 @@ class PostsController < ApplicationController
     @favorite = Favorite.new
     @comment = Comment.new
     @comments = @post.comments
+    @lat = @post.spot.latitude
+    @lng = @post.spot.longitude
+    gon.lat = @lat
+    gon.lng = @lng
   end
 
   # 投稿新規ページのアクション
   def new
     @post = Post.new
     # @post = Review.new
-    # @post.build_spot
+    @post.build_spot
   end
 
   # 投稿更新ページのアクション

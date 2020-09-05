@@ -9,10 +9,10 @@
   <p><%= f.text_field :tag_list, value: @post.tag_list.join(','), class: "form-control" %></p>
 
   <div class="spot">
-  <p><%= f.label :address,"レビュー場所(Google Mapで検索)", class: "spot__title" %></p>
-  <p><%= f.text_field :address, placeholder: "スポットを入力", id: "address", class: "spot__text"%></p>
-    <input onclick="codeAddress()" type="button" value="検索する"></input>
-    <div class="map" id="map" style="height: 320px; width: 640px;"></div>
+    <p><%= f.label :address, "レビュー場所(Google Mapで検索)", class: "spot__title" %></p>
+    <p><%= f.text_field :address, placeholder: "スポットを入力", id: "address", class: "spot__text" %></p>
+    <input onclick="codeAddress()" type="button" value="検索する">
+    <div id="map" style="width:640px; height:320px"></div>
   </div>
 
 
