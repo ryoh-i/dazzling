@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class CommentsController < ApplicationController
-  #レビュー用のコメント作成のアクション
+  # レビュー用のコメント作成のアクション
   def create
     @post = Post.find(params[:post_id])
     # buildを使い、@postのidをpost_idに含んだ形でcommentのインスタンスを作成
@@ -9,7 +11,7 @@ class CommentsController < ApplicationController
     render :index
   end
 
-  #レビュー用のコメント削除のアクション
+  # レビュー用のコメント削除のアクション
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy

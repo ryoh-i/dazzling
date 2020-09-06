@@ -4,14 +4,17 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :comments, dependent: :destroy
-
   # favorited_postsによってユーザーがどの投稿をお気に入りしているかを取得することができる
   has_many :favorited_posts, through: :favorites, source: :post
+
   # following_relationshipsモデルを架空で作成しており、follower_idを参考にfollowing_relationshipsモデルにアクセスするようにしている
   has_many :following_relationships, foreign_key: 'follower_id', class_name: 'Relationship', dependent: :destroy
   has_many :following, through: :following_relationships
   has_many :follower_relationships, foreign_key: 'following_id', class_name: 'Relationship', dependent: :destroy
   has_many :followers, through: :follower_relationships
+
+  has_many :messages, dependent: :destroy
+  has_many :entries, dependent: :destroy
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

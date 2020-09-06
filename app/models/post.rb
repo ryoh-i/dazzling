@@ -3,6 +3,10 @@
 class Post < ApplicationRecord
   belongs_to :user
   has_many :favorites
+
+  has_one :spot, dependent: :destroy
+  accepts_nested_attributes_for :spot
+
   # favorited_usersによって投稿がどのユーザーにお気に入りされているかを取得することができる
   has_many :favorited_users, through: :favorites, source: :user
   has_many :comments, dependent: :destroy

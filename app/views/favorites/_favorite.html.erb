@@ -1,5 +1,6 @@
-<% if current_user.already_favorited?(@post) %>
-  <%= button_to 'いいねを取り消す', post_favorite_path(@post), method: :delete, remote: true %>
+<!--お気に入り機能についての部分テンプレート-->
+<% if current_user.already_favorited?(post) %>
+  <%= button_to 'いいねを取り消す', post_favorites_path(post), method: :delete, remote: true %>
 <% else %>
-  <%= button_to 'いいねを登録する', post_favorites_path(@post), method: :post, remote: true %>
+  <%= button_to 'いいねを登録する', post_favorites_path(post), method: :post, remote: true %>
 <% end %>
