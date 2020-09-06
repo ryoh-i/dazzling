@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_04_122644) do
+ActiveRecord::Schema.define(version: 2020_09_01_173910) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content"
@@ -85,8 +85,6 @@ ActiveRecord::Schema.define(version: 2020_09_04_122644) do
     t.float "longitude"
     t.string "address"
     t.integer "post_id"
-    t.bigint "review_id"
-    t.index ["review_id"], name: "index_spots_on_review_id"
   end
 
   create_table "taggings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -112,7 +110,6 @@ ActiveRecord::Schema.define(version: 2020_09_04_122644) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "taggings_count", default: 0
-    t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
