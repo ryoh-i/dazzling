@@ -10,8 +10,8 @@ RUN apt-get update -qq && apt-get install -y --no-install-recommends nodejs yarn
 
 RUN mkdir /web
 WORKDIR /web
-COPY ../Gemfile /web/Gemfile
-COPY ../Gemfile.lock /web/Gemfile.lock
+COPY Gemfile /web/Gemfile
+COPY Gemfile.lock /web/Gemfile.lock
 RUN bundle install
 RUN yarn install
 RUN yarn upgrade
