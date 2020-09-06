@@ -29,15 +29,6 @@ ActiveRecord::Schema.define(version: 2020_08_29_141856) do
     t.index ["user_id"], name: "index_entries_on_user_id"
   end
 
-  create_table "entrys", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "room_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["room_id"], name: "index_entrys_on_room_id"
-    t.index ["user_id"], name: "index_entrys_on_user_id"
-  end
-
   create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "post_id"
     t.bigint "user_id"
@@ -93,9 +84,7 @@ ActiveRecord::Schema.define(version: 2020_08_29_141856) do
     t.float "latitude"
     t.float "longitude"
     t.string "address"
-    t.bigint "review_id_id"
     t.integer "post_id"
-    t.index ["review_id_id"], name: "index_spots_on_review_id_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -117,8 +106,6 @@ ActiveRecord::Schema.define(version: 2020_08_29_141856) do
 
   add_foreign_key "entries", "rooms"
   add_foreign_key "entries", "users"
-  add_foreign_key "entrys", "rooms"
-  add_foreign_key "entrys", "users"
   add_foreign_key "favorites", "posts"
   add_foreign_key "favorites", "users"
   add_foreign_key "messages", "rooms"
