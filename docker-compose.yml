@@ -31,8 +31,3 @@ services:
       - db
     stdin_open: true
     tty: true
-    environment:
-      DATABASE_USER: root
-      DATABASE_PASSWORD: password
-      DATABASE_PORT: 3306
-      DATABASE_HOST: db

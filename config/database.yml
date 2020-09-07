@@ -10,7 +10,7 @@ default: &default
   pool: 5
   username: <%= ENV['DATABASE_DEV_USER'] %>
   password: <%= ENV['DATABASE_DEV_PASSWORD'] %>
-  # socket: /tmp/mysql.sock // ローカルのmysqlを使う場合にはコメントを外す
+  socket: /tmp/mysql.sock
 
 development:
   adapter: mysql2
