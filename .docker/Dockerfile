@@ -1,4 +1,4 @@
-FROM ruby:2.7.1
+FROM ruby:2.7.0
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
@@ -10,8 +10,8 @@ RUN apt-get update -qq && apt-get install -y --no-install-recommends nodejs yarn
 
 RUN mkdir /web
 WORKDIR /web
-COPY ../Gemfile /web/Gemfile
-COPY ../Gemfile.lock /web/Gemfile.lock
+COPY Gemfile /web/Gemfile
+COPY Gemfile.lock /web/Gemfile.lock
 RUN bundle install
 RUN yarn install
 RUN yarn upgrade
