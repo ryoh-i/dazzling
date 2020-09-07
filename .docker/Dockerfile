@@ -1,4 +1,4 @@
-FROM ruby:2.7.1
+FROM ruby:2.7.0
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
