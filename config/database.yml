@@ -15,7 +15,7 @@ default: &default
 development:
   adapter: mysql2
   encoding: utf8
-  database: dazzling_development
+  database: mysql_development
   pool: 5
   username: <%= ENV['DATABASE_DEV_USER'] %>
   password: <%= ENV['DATABASE_DEV_PASSWORD'] %>
@@ -27,7 +27,7 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: dazzling_test
+  database: mysql_test
   pool: 5
   username: <%= ENV['DATABASE_DEV_USER'] %>
   password: <%= ENV['DATABASE_DEV_PASSWORD'] %>
@@ -36,7 +36,7 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
-  database: dazzling_production
+  database: mysql_production
   pool: 5
   username: <%= ENV['DATABASE_DEV_USER'] %>
   password: <%= ENV['DATABASE_DEV_PASSWORD'] %>
