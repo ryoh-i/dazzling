@@ -11,7 +11,6 @@
   <%= f.text_field :tag_list, value: @post.tag_list.join(','), autofocus: true, autocomplete: "tag_list", class: "form-control", id: "formGroupExampleInput", placeholder: "劇団四季,アラジン" %>
 
   <div class="spot">
-    <%= f.label :address %>
     <input onclick="codeAddress()" type="button" value="検索する">
     <div id="map" style="width:640px; height:320px"></div>
   </div>
