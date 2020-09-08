@@ -32,8 +32,6 @@
         <% if current_user.image? %>
           <div class="edit-image">
           <p><%= image_tag current_user.image.to_s %></p>
-            <% else %>
-          <%= image_tag 'default.jpg', class: 'present_image' %>
           </div>
         <% end %>
       </div>
