@@ -14,18 +14,39 @@
     <li class="post__menu__list__li">おすすめランキング</li>
     <li class="post__menu__list__li">お気に入り</li>
     <li class="post__menu__list__li">地図で口コミを探す</li>
-    <li class="post__menu__list__li">新規投稿</li>
+    <li class="post__menu__list__button">新規投稿</li>
   </ul>
   <!--キーワード絞り込み機能フォーム-->
   <div class="post__form">
     <figure class="post__form__search-border"></figure>
     <%= form_tag(posts_path, :method => 'get', class: "active-cyan-4", style: "display: flex") do %>
-      <%= text_field_tag(:search, '', class: "form-control w-100") %>
-      <%= button_tag '<i class="fa fa-search"></i>'.html_safe, :type => "submit", :class =>"btn btn-default btn-s-md post__form__search-button" %>
+      <%= text_field_tag(:search, '', class: "form-control w-100", placeholder: "口コミを検索...") %>
+      <%= button_tag '<i class="fa fa-search"></i>'.html_safe, :type => "submit", :class => "btn btn-default btn-s-md post__form__search-button" %>
     <% end %>
   </div>
   <!--キーワード絞り込み機能フォームここまで-->
 </menu>
+
+<!--実際にはここで @posts.eachをする-->
+<% 5.times do |index| %>
+  <article class="article">
+    <!--XDの画像サイズが小さすぎるので、あえて背景色を設定している。大きなサイズを添付すると object-fit: coverでリサイズされるはず-->
+    <%= image_tag 'sample-images/sample-thumbnail.png', :class => 'article-container__thumbnail', :alt => 'Thumbnail' %>
+    <div class="article-container__main">
+      <p>TYPE OF PAGE</p>
+      <h4>美女と野獣</h4>
+      <text>ディズニー大定番の作品！ 主演の男性役者のセリフはすんなりと心に落ちていき、話し方や滑舌がうまく表現できており観ていて気分が良かった。 2020/07/07 22:08 タグ：[劇団四季] [ディズニー]</text>
+      <figure class="article-container__main__buttons">
+        <!-- @todo 星をいくつ出すかのロジックは検討する必要がありそう-->
+        <%= image_tag 'sample-images/sample-star-rating.png', :alt => 'star-rating' %>
+        <%= image_tag 'sample-images/sample-heart.png', :alt => 'heart' %>
+      </figure>
+    </div>
+    <figure class="ranking">
+      <p><%= index + 1 %>位</p>
+    </figure>
+  </article>
+<% end %>
 
 <% @posts.each do |post| %>
   <div class="card mb-3" style="max-width: 1500px;">
