@@ -37,6 +37,11 @@ class PostsController < ApplicationController
   def create
     # find_or_create_by を使ってみる
     @post = Post.new(post_params)
+    @spot = Spot.new
+    @spot.post = @post
+    @spot.latitude = params[:latitude]
+    @spot.longitude = params[:longitude]
+    @spot.save
     if @post.save
       redirect_to posts_url, notice: '口コミを投稿しました'
     else
