@@ -1,13 +1,31 @@
 <!--suppress ALL -->
-<h1>口コミ一覧</h1>
-<p>検索</p>
 
-<!--キーワード絞り込み機能フォーム-->
-<%= form_tag(posts_path, :method => 'get', class: "form-control") do %>
-  <%= text_field_tag :search %>
-  <%= submit_tag 'Search', :name => nil %>
-<% end %>
-<!--キーワード絞り込み機能フォームここまで-->
+<div class="post__title">
+  <div class="balloon">口コミ一覧(ホーム)</div>
+  <!--  <h1 class="post__title__font">口コミ一覧(ホーム）</h1>-->
+  <p class="post_title_guide">
+    このページでは、他のユーザーの口コミをみることができます。<br>
+    気になった口コミ投稿があればイイネを押してお気に入りに登録も可能です。
+  </p>
+</div>
+<menu class="post__menu">
+  <ul class="post__menu__list">
+    <li class="post__menu__list__li li-active">口コミ一覧</li>
+    <li class="post__menu__list__li">おすすめランキング</li>
+    <li class="post__menu__list__li">お気に入り</li>
+    <li class="post__menu__list__li">地図で口コミを探す</li>
+    <li class="post__menu__list__li">新規投稿</li>
+  </ul>
+  <!--キーワード絞り込み機能フォーム-->
+  <div class="post__form">
+    <figure class="post__form__search-border"></figure>
+    <%= form_tag(posts_path, :method => 'get', class: "active-cyan-4", style: "display: flex") do %>
+      <%= text_field_tag(:search, '', class: "form-control w-100") %>
+      <%= button_tag '<i class="fa fa-search"></i>'.html_safe, :type => "submit", :class =>"btn btn-default btn-s-md post__form__search-button" %>
+    <% end %>
+  </div>
+  <!--キーワード絞り込み機能フォームここまで-->
+</menu>
 
 <% @posts.each do |post| %>
   <div class="card mb-3" style="max-width: 1500px;">

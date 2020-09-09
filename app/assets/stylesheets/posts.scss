@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+ol, ul, li {
+  list-style-type: none;
+}
+
 .icon_image {
   width: 200px;
   height: 200px;
@@ -14,6 +18,105 @@
   max-width: 900px;
 }
 
-.post-new-btn{
+.post-new-btn {
   text-align: center;
+}
+
+.post__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  height: 150px;
+  padding: 26px;
+}
+
+.balloon {
+  position: relative; /* 三角の位置を固定するために設定 */
+  width: 370px; /* 幅 */
+  padding: 20px; /* ふきだし内の余白 */
+  background: #ddd; /* 背景色 */
+  text-align: center; /* テキストの揃え */
+  background: transparent linear-gradient(91deg, #B9F0E5 0%, #5D7873 100%) 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  font-weight: normal;
+  font-size: 25px;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.balloon::before { /* 三角の部分 */
+  content: '';
+  position: absolute; /* 位置固定 */
+  bottom: -28px; /* 線幅の2倍 */
+  left: 50%;
+  margin-left: -14px; /* 線幅だけずらす */
+  border: 14px solid transparent; /* 線幅の設定 */
+  border-top-color: #5D7873; /* 吹き出しの地と同じ色 */
+}
+
+.post_title_guide {
+  text-align: left;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  color: #404040;
+  opacity: 1;
+}
+
+.post__menu {
+  display: flex;
+  justify-content: space-between;
+  height: 82px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 35px #00000008;
+}
+
+.post__menu__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 850px;
+  margin: 0 0 0 26px;
+}
+
+.post__menu__list__li {
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: 0px;
+  color: rgba(64, 64, 64, 0.4);
+}
+
+.li-active {
+  color: rgb(64, 64, 64);
+}
+
+.post__form {
+  display: flex;
+  align-items: center;
+  width: 302px;
+  margin: 0 38px;
+
+  form {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  figure {
+    padding: 0;
+    margin-bottom: 0;
+  }
+}
+
+.post__form__search-border {
+  width: 2px;
+  height: 82px;
+  margin-right: 18px;
+  border-left: solid 1px #F0F0F0;
+}
+
+.post__form__search-button {
+  margin-left: -42px;
 }
