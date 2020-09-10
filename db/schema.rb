@@ -29,15 +29,6 @@ ActiveRecord::Schema.define(version: 2020_09_04_122644) do
     t.index ["user_id"], name: "index_entries_on_user_id"
   end
 
-  create_table "entrys", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "room_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["room_id"], name: "index_entrys_on_room_id"
-    t.index ["user_id"], name: "index_entrys_on_user_id"
-  end
-
   create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "post_id"
     t.bigint "user_id"
@@ -76,6 +67,7 @@ ActiveRecord::Schema.define(version: 2020_09_04_122644) do
     t.integer "following_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["follower_id", "following_id"], name: "index_relationships_on_follower_id_and_following_id", unique: true
   end
 
   create_table "rooms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -120,7 +112,6 @@ ActiveRecord::Schema.define(version: 2020_09_04_122644) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "taggings_count", default: 0
-    t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -142,8 +133,6 @@ ActiveRecord::Schema.define(version: 2020_09_04_122644) do
 
   add_foreign_key "entries", "rooms"
   add_foreign_key "entries", "users"
-  add_foreign_key "entrys", "rooms"
-  add_foreign_key "entrys", "users"
   add_foreign_key "favorites", "posts"
   add_foreign_key "favorites", "users"
   add_foreign_key "messages", "rooms"
