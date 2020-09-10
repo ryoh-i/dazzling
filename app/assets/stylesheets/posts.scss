@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+ol, ul, li {
+  list-style-type: none;
+}
+
 .icon_image {
   width: 200px;
   height: 200px;
@@ -12,4 +16,306 @@
 
 .element.style {
   max-width: 900px;
+}
+
+.post-new-btn {
+  text-align: center;
+}
+
+.post__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  height: 150px;
+  padding: 26px;
+}
+
+.balloon {
+  position: relative; /* 三角の位置を固定するために設定 */
+  width: 370px; /* 幅 */
+  padding: 20px; /* ふきだし内の余白 */
+  background: #ddd; /* 背景色 */
+  text-align: center; /* テキストの揃え */
+  background: transparent linear-gradient(91deg, #B9F0E5 0%, #5D7873 100%) 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  font-weight: normal;
+  font-size: 25px;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.balloon::before { /* 三角の部分 */
+  content: '';
+  position: absolute; /* 位置固定 */
+  bottom: -28px; /* 線幅の2倍 */
+  left: 50%;
+  margin-left: -14px; /* 線幅だけずらす */
+  border: 14px solid transparent; /* 線幅の設定 */
+  border-top-color: #5D7873; /* 吹き出しの地と同じ色 */
+}
+
+.post_title_guide {
+  text-align: left;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  color: #404040;
+  opacity: 1;
+}
+
+.post__menu {
+  display: flex;
+  justify-content: space-between;
+  height: 82px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 35px #00000008;
+}
+
+.post__menu__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 900px;
+  margin: 0 0 0 26px;
+}
+
+.post__menu__list__li {
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: 0px;
+  color: rgba(64, 64, 64, 0.4);
+}
+
+.post__menu__list__button {
+  width: 186px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 3px solid #5CB0C5;
+  border-radius: 22px;
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: 0px;
+  color: rgb(64, 64, 64);
+}
+
+.li-active {
+  color: rgb(64, 64, 64);
+}
+
+.post__form {
+  display: flex;
+  align-items: center;
+  width: 302px;
+  margin: 0 38px;
+
+  form {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  figure {
+    padding: 0;
+    margin-bottom: 0;
+  }
+}
+
+.post__form__search-border {
+  width: 2px;
+  height: 82px;
+  margin-right: 18px;
+  border-left: solid 1px #F0F0F0;
+}
+
+.post__form__search-button {
+  margin-left: -42px;
+}
+
+.container-wrapper {
+  display: flex;
+}
+
+.left-container {
+  flex: 1;
+}
+
+.article {
+  margin: 18px 0;
+  display: flex;
+  align-items: center;
+  width: 917px;
+  height: 150px;
+  background: white;
+}
+
+.article-container__thumbnail {
+  width: 167px;
+  height: 117px;
+  object-fit: cover;
+  background-color: rgba(64, 64, 64, 0.2);
+}
+
+.article-container__main {
+  margin-left: 34px;
+  width: 550px;
+  position: relative;
+
+  p {
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 0.65px;
+    color: rgba(64, 64, 64, 0.24);
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    font-size: 20px;
+    font-weight: normal;
+    color: #404040;
+    margin-bottom: 18px;
+  }
+
+  text {
+    font-size: 10px;
+    font-weight: normal;
+    color: #404040;
+  }
+}
+
+.article-container__main__buttons{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: -6px;
+  right: 0;
+  display: flex;
+  width: 386px;
+  justify-content: space-between;
+}
+
+.ranking {
+  margin: 0 24px 0 32px;
+  width: 110px;
+  height: 87px;
+  display: grid;
+  place-items: center;
+  border: solid 2px #707070;
+  border-radius: 50%;
+
+  p {
+    margin: 0;
+    color: #D8FF00;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+}
+
+.right-container__profile {
+  padding: 20px 0;
+  width: 100%;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-container__profile__name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #404040;
+  margin-top: 22px;
+}
+
+.right-container__profile__follow {
+  font-size: 15px;
+  color: rgba(64, 64, 64, 0.83);
+  margin-top: 17px;
+}
+
+.right-container__profile__button {
+  margin-top: 41px;
+}
+
+.tag-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: solid 1px #2699FB;
+  border-bottom: solid 1px #2699FB;
+  padding: 16px 0;
+}
+
+.tag-container__title {
+  font-size: 26px;
+  color: #000000;
+  margin-bottom: 18px;
+}
+
+.tag-container__tags {
+  display: flex;
+  flex-wrap: wrap;
+  width: 285px;
+  margin: 16px 0;
+}
+
+.tag-container__tag {
+  font-size: 12px;
+  color: #2699FB;
+  background: #F1F9FF 0% 0% no-repeat padding-box;
+  border: 3px solid #BCE0FD;
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin: 0 8px 8px 0;
+}
+
+.vulnerability-diagnosis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 8px;
+}
+
+.vulnerability-diagnosis__title {
+  font-size: 26px;
+  color: #000000;
+}
+
+.vulnerability-diagnosis__text {
+  padding-top: 16px;
+  width: 250px;
+  font-size: 16px;
+  color: #000000;
+}
+
+.pagenation {
+  margin: 0 auto;
+  width: 634px;
+
+  li > a {
+    border: none;
+    color: rgba(64, 64, 64, 0.43);
+    background-color: #EAE4E4;
+  }
+
+  .active {
+    color: #404040;
+  }
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 114px;
+  height: 114px;
+  border-radius: 50%;
 }

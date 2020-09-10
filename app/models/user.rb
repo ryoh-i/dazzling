@@ -55,7 +55,8 @@ class User < ApplicationRecord
     end
   end
 
-  # Rspecテストのため、一時的に記載
-  validates :name, presence: true
+  # nameが空、ユニーク、最大が10文字以下であるように
+  validates :name, presence: true, uniqueness: true, length: {maximum: 10}
+  # profileが200文字以下であるように
   validates :profile, length: { maximum: 200 }
 end

@@ -1,22 +1,20 @@
 <h1>口コミを投稿</h1>
 
 <%= form_with model: @post, local: true do |f| %>
-  <p><%= f.label :title %></p>
-  <p><%= f.text_field :title, class: "f-control f-control-lg" %></p>
-  <p><%= f.label :content %></p>
-  <p><%= f.text_area :content, class: "f-control" %></p>
+  <%= f.label :title %>
+  <%= f.text_field :title, autofocus: true, autocomplete: "title", class: "form-control", id: "formGroupExampleInput", placeholder: "演目名やタイトル" %>
+
+  <%= f.label :content %>
+  <%= f.text_area :content, autofocus: true, autocomplete: "content", class: "form-control", id: "exampleFormControlTextarea1", rows: "3", placeholder: "観劇いただいた、また観劇予定の演目の感想及び期待" %>
+
+  <%= f.label :post, :tag_list %>
+  <%= f.text_field :tag_list, value: @post.tag_list.join(','), autofocus: true, autocomplete: "tag_list", class: "form-control", id: "formGroupExampleInput", placeholder: "劇団四季,アラジン" %>
 
   <div class="spot">
-  <p><%= f.label :address,"レビュー場所(Google Mapで検索)", class: "spot__title" %></p>
-  <p><%= f.text_field :address, placeholder: "スポットを入力", id: "address", class: "spot__text"%></p>
-    <input onclick="codeAddress()" type="button" value="検索する"></input>
-    <div class="map" id="map" style="height: 320px; width: 640px;"></div>
-  </div>
-
-
-  <div class="field">
-    <%= f.label :image %><br/>
-    <%= f.file_field :image, class: "btn btn-secondary" %>
+    <%= f.label :address %>
+    <p><%= f.text_field :address, placeholder: "スポットを入力", id: "address", class: "spot__text" %></p>
+    <input onclick="codeAddress()" type="button" value="検索する">
+    <div id="map" style="width:640px; height:320px"></div>
   </div>
 
   <!--星評価機能フォーム-->
@@ -37,7 +35,7 @@
       });
   </script>
 
-  <div class="submit-btn">
-    <%= f.submit "新規投稿", class: "btn btn-secondary" %>
+  <div class="post-new-btn">
+    <%= f.submit "新規投稿", class: "btn btn-primary" %>
   </div>
 <% end %>

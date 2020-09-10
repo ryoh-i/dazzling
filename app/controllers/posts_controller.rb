@@ -3,9 +3,15 @@
 class PostsController < ApplicationController
   # 投稿一覧のアクション
   def index
-    # 　@posts = Post.all.page(params[:page]).per(10)
+    # @posts = Post.all.page(params[:page]).per(10)
     # 上記では、検索機能で絞ることはできていないため、以下のようにpost.rbのsearchを使って絞る。
     @posts = Post.search(params[:search]).page(params[:page]).per(6)
+
+    # タグにて絞り込み
+    if params[:tag_name]
+      @posts = Post.tagged_with("#{params[:tag_name]}").page(params[:page]).per(6)
+    end
+
   end
 
   # 投稿詳細ページのアクション
@@ -14,11 +20,17 @@ class PostsController < ApplicationController
     @favorite = Favorite.new
     @comment = Comment.new
     @comments = @post.comments
+    @lat = @post.spot.latitude
+    @lng = @post.spot.longitude
+    gon.lat = @lat
+    gon.lng = @lng
   end
 
   # 投稿新規ページのアクション
   def new
     @post = Post.new
+    # @post = Review.new
+    @post.build_spot
   end
 
   # 投稿更新ページのアクション
@@ -64,6 +76,6 @@ class PostsController < ApplicationController
 
   def post_params
     params[:post][:user_id] = current_user.id
-    params.require(:post).permit(:title, :profile, :content, :image, :user_id, :rate, :text, spot_attributes: [:address])
+    params.require(:post).permit(:title, :profile, :content, :image, :user_id, :rate, :text, :tag_list, spot_attributes: [:address])
   end
 end
