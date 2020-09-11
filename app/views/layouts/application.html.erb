@@ -28,15 +28,13 @@
         <%= link_to "プロフィール編集", edit_user_registration_path, class: "header__nav__button" %>
         <%= link_to "ユーザー詳細ページ", user_path(current_user), class: "header__nav__button" %>
         <%= link_to "登録ユーザー一覧", users_path, class: "header__nav__button" %>
-        user_signed_in?は<%= user_signed_in? %>となっている
-        current_user.(ログイン名)は<%= current_user.name %>となっている
+            </div>
         <div class="home-image">
           <% if current_user.image? %>
             <div class="edit-image">
               <p><%= image_tag current_user.image.to_s %></p>
           <% else %>
             <%= image_tag 'default.jpg', class: 'present_image' %>
-            </div>
           <% end %>
         </div>
       <% else %>

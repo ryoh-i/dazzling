@@ -11,6 +11,7 @@ class PostsController < ApplicationController
     if params[:tag_name]
       @posts = Post.tagged_with("#{params[:tag_name]}").page(params[:page]).per(6)
     end
+    @tags = ActsAsTaggableOn::Tag.all
 
   end
 
