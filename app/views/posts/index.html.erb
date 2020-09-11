@@ -75,7 +75,11 @@
 
   <div class="right-container">
     <div class="right-container__profile">
-      <!--%= image_tag 'sample-images/sample-noimage.png', :class => 'avatar', :alt => 'Avatar' %-->
+      <% if current_user.image? %>
+        <p><%= image_tag current_user.image.to_s, class: 'avatar' %></p>
+      <% else %>
+        <%= image_tag 'default.jpg', class: 'avatar' %>
+      <% end %>
       <span class="right-container__profile__name"><%= current_user.name %></span>
       <span class="right-container__profile__follow">フォロワー 100人</span>
       <%= link_to "プロフィール詳細", user_path(current_user), class: "post__menu__list__button right-container__profile__button" %>
@@ -83,21 +87,13 @@
 
     <span class="tag-container__title">タグから探す</span>
     <div class="tag-container">
-    <% @tags.each do |tag| %>
-      <div class="tag-container__tags">
-        <p class="tag-container__tag"><%= link_to tag, posts_path(tag_name: tag) %></p>
-        <p class="tag-container__tag"><%= link_to tag, posts_path(tag_name: tag) %></p>
-        <p class="tag-container__tag">ui</p>
-        <p class="tag-container__tag">graphics</p>
-        <p class="tag-container__tag">web</p>
-        <p class="tag-container__tag">design</p>
-        <p class="tag-container__tag">app</p>
-        <p class="tag-container__tag">iphone</p>
-        <p class="tag-container__tag">interface</p>
-      </div>
-    <% end %>
+      <% @tags.each do |tag| %>
+        <div class="tag-container__tags">
+          <p class="tag-container__tag"><%= link_to tag, posts_path(tag_name: tag) %></p>
+        </div>
+      <% end %>
 
-    <button type="button" class="post__menu__list__button">もっと表示</button>
+      <button type="button" class="post__menu__list__button">もっと表示</button>
       <!--この下の画像はXDで切り出して挿入してください-->
     </div>
     <div class="vulnerability-diagnosis">

@@ -29,14 +29,6 @@
         <%= link_to "ユーザー詳細ページ", user_path(current_user), class: "header__nav__button" %>
         <%= link_to "登録ユーザー一覧", users_path, class: "header__nav__button" %>
             </div>
-        <div class="home-image">
-          <% if current_user.image? %>
-            <div class="edit-image">
-              <p><%= image_tag current_user.image.to_s %></p>
-          <% else %>
-            <%= image_tag 'default.jpg', class: 'present_image' %>
-          <% end %>
-        </div>
       <% else %>
         <%= link_to "dazzling", new_user_registration_path, class: "header__nav__button" %>
         <%= link_to "アカウント作成", new_user_registration_path, class: "header__nav__button" %>
