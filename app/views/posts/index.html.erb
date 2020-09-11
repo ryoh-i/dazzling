@@ -1,54 +1,110 @@
-<h1>口コミ一覧</h1>
-<p>検索</p>
+<!--suppress ALL -->
 
-<!--キーワード絞り込み機能フォーム-->
-<%= form_tag(posts_path, :method => 'get', class: "form-control") do %>
-  <%= text_field_tag :search %>
-  <%= submit_tag 'Search', :name => nil %>
-<% end %>
-<!--キーワード絞り込み機能フォームここまで-->
+<!--タイトル-->
+<div class="post__title">
+  <div class="balloon">口コミ一覧(ホーム)</div>
+  <!--  <h1 class="post__title__font">口コミ一覧(ホーム）</h1>-->
+  <p class="post_title_guide">
+    このページでは、他のユーザーの口コミをみることができます。<br>
+    気になった口コミ投稿があればイイネを押してお気に入りに登録も可能です。
+  </p>
+</div>
+<!--タイトル-->
 
-<% @posts.each do |post| %>
-  <div class="card mb-3" style="max-width: 1500px;">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <svg class="bd-placeholder-img" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image">
-          <title>Placeholder</title>
-          <rect fill="#868e96" width="100%" height="100%"/>
-          <text fill="#dee2e6" dy=".3em" x="50%" y="50%"><%= post.image %></text>
-        </svg>
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title"><%= link_to(post.title, "posts/#{post.id}") %></h5>
-          <p class="card-text"><%= post.content %></p>
-          <p class="card-text"><small class="text-muted"><%= post.created_at %></small></p>
+<!--上部メニュー-->
+<menu class="post__menu">
+  <ul class="post__menu__list">
+    <%= link_to "口コミ一覧", posts_path, class: "post__menu__list__li li-active" %>
+    <li class="post__menu__list__li">お気に入り</li>
+    <li class="post__menu__list__li">地図で口コミを探す</li>
+    <%= link_to "新規投稿", new_post_path, class: "post__menu__list__button" %>
+  </ul>
+
+  <!--キーワード絞り込み機能フォーム-->
+  <div class="post__form">
+    <figure class="post__form__search-border"></figure>
+    <%= form_tag(posts_path, :method => 'get', class: "active-cyan-4", style: "display: flex") do %>
+      <%= text_field_tag(:search, '', class: "form-control w-100", placeholder: "キーワードで口コミを検索...") %>
+      <%= button_tag '<i class="fa fa-search"></i>'.html_safe, :type => "submit", :class => "btn btn-default btn-s-md post__form__search-button" %>
+    <% end %>
+  </div>
+  <!--キーワード絞り込み機能フォームここまで-->
+</menu>
+<!--上部メニューここまで-->
+
+<!--口コミ投稿一覧メイン-->
+<div class="container-wrapper">
+  <div class="left-container">
+    <% @posts.each do |post| %>
+      <article class="article">
+        <div class="article-container__main">
+          <!--タイトル＆本文表示＆更新時間表示＆タグ表示-->
+          <h4><%= link_to(post.title, "posts/#{post.id}") %></h4>
+          <p><%= post.content %> <%= post.created_at %></p>
+          <% post.tag_list.each do |tag| %>
+            [<%= link_to tag, posts_path(tag_name: tag) %>]
+          <% end %>
+          <!--タイトル＆本文表示＆更新時間表示＆タグ表示ここまで-->
         </div>
-      </div>
-      <!--タグ表示-->
-      <% post.tag_list.each do |tag| %>
-        <%= link_to tag, posts_path(tag_name: tag) %>
+
+        <!--星評価機能表示-->
+        <div id="star-rate-<%= post.id %>"></div>
+        <script>
+            $('#star-rate-<%= post.id %>').raty({
+                size: 36,
+                starOff: '<%= asset_path('star-off.png') %>',
+                starOn: '<%= asset_path('star-on.png') %>',
+                starHalf: '<%= asset_path('star-half.png') %>',
+                half: true,
+                readOnly: true,
+                score: <%= post.rate %>,
+            });
+        </script>
+        <!--星評価機能表示ここまで-->
+
+        <figure class="article-container__main__buttons">
+          <!-- @todo 星をいくつ出すかのロジックは検討する必要がありそう-->
+          <!--%= image_tag 'sample-images/sample-star-rating.png', :alt => 'star-rating' %-->
+          <!--%= image_tag 'sample-images/sample-heart.png', :alt => 'heart' %-->
+
+        </figure>
+      </article>
+    <% end %>
+  </div>
+  <!--口コミ投稿一覧メインここまで-->
+
+  <div class="right-container">
+    <div class="right-container__profile">
+      <% if current_user.image? %>
+        <p><%= image_tag current_user.image.to_s, class: 'avatar' %></p>
+      <% else %>
+        <%= image_tag 'default.jpg', class: 'avatar' %>
       <% end %>
-      <!--タグ表示ここまで-->
+      <span class="right-container__profile__name"><%= current_user.name %></span>
+      <span class="right-container__profile__follow">フォロワー 100人</span>
+      <%= link_to "プロフィール詳細", user_path(current_user), class: "post__menu__list__button right-container__profile__button" %>
     </div>
 
-    <!--星評価機能表示-->
-    <div id="star-rate-<%= post.id %>"></div>
-    <script>
-        $('#star-rate-<%= post.id %>').raty({
-            size: 36,
-            starOff: '<%= asset_path('star-off.png') %>',
-            starOn: '<%= asset_path('star-on.png') %>',
-            starHalf: '<%= asset_path('star-half.png') %>',
-            half: true,
-            readOnly: true,
-            score: <%= post.rate %>,
-        });
-    </script>
+    <span class="tag-container__title">タグから探す</span>
+    <div class="tag-container">
+      <% @tags.each do |tag| %>
+        <div class="tag-container__tags">
+          <p class="tag-container__tag"><%= link_to tag, posts_path(tag_name: tag) %></p>
+        </div>
+      <% end %>
+
+      <button type="button" class="post__menu__list__button">もっと表示</button>
+      <!--この下の画像はXDで切り出して挿入してください-->
+    </div>
+    <div class="vulnerability-diagnosis">
+      <span class="vulnerability-diagnosis__title">脆弱性診断自動化について</span>
+      <p class="vulnerability-diagnosis__text">本ポートフォリオを実装した脆弱性診断の自動化についての詳細をおまとめいたしました。</p>
+      <button type="button" class="post__menu__list__button">専用ページへ</button>
+    </div>
   </div>
-  <!--星評価機能表示ここまで-->
+</div>
 
-<% end %>
-
-<!--kaminari ページネーション機能-->
+<!--kaminari ページネーション-->
 <%= paginate @posts %>
+<!--kaminari ページネーションここまで-->
+
