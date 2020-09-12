@@ -1,19 +1,56 @@
-<h1>登録ユーザー一覧</h1>
+<!--suppress ALL -->
+
+<!--タイトル-->
+<div class="post__title">
+  <div class="balloon">登録ユーザー一覧</div>
+  <!--  <h1 class="post__title__font">口コミ一覧(ホーム）</h1>-->
+  <p class="post_title_guide">
+    このページでは、他のユーザーの口コミをみることができます。<br>
+    気になった口コミ投稿があればイイネを押してお気に入りに登録も可能です。
+  </p>
+</div>
+<!--タイトル-->
+
+<!--上部メニュー-->
+<menu class="post__menu">
+  <ul class="post__menu__list">
+    <%= link_to "口コミ一覧", posts_path, class: "post__menu__list__li li-active" %>
+    <li class="post__menu__list__li">お気に入り</li>
+    <li class="post__menu__list__li">地図で口コミを探す</li>
+    <%= link_to "新規投稿", new_post_path, class: "post__menu__list__button" %>
+  </ul>
+
+  <!--キーワード絞り込み機能フォーム-->
+  <div class="post__form">
+    <figure class="post__form__search-border"></figure>
+    <%= form_tag(posts_path, :method => 'get', class: "active-cyan-4", style: "display: flex") do %>
+      <%= text_field_tag(:search, '', class: "form-control w-100", placeholder: "キーワードで口コミを検索...") %>
+      <%= button_tag '<i class="fa fa-search"></i>'.html_safe, :type => "submit", :class => "btn btn-default btn-s-md post__form__search-button" %>
+    <% end %>
+  </div>
+  <!--キーワード絞り込み機能フォームここまで-->
+</menu>
+<!--上部メニューここまで-->
 
 <!--bootstrapの挙動はおかしいが一旦クラスを付与-->
 <%= form_tag(users_path, :method => 'get', class: "form-control" ) do %>
   <%= text_field_tag :search %>
   <%= submit_tag 'Search', :name => nil %>
 <% end %>
-
 <!--bootstrapの挙動はおかしいが一旦クラスを付与-->
-<% @users.each do |user| %>
-<div class="card w-50">
-  <div class="card-body">
-    <h5 class="card-title"><%= link_to user.name,user_path(user.id) %></h5>
-    <p class="card-text"><%= user.id %></p>
-    <a href="#" class="btn btn-primary">ユーザープロフィールへ(link_toでデザインが崩れるため、まだ遷移しない)</a>
+
+<div class="container-wrapper">
+  <div class="left-container">
+    <% @users.each do |user| %>
+      <article class="article__userindex">
+        <div class="article-container__main">
+          <!--タイトル＆本文表示＆更新時間表示＆タグ表示-->
+          <h4><%= link_to user.name,user_path(user.id) %></h4>
+          <p><%= user.profile %></p>
+        </div>
+      </article>
+    <% end %>
   </div>
 </div>
-<% end %>
+
 <%= paginate @users %>

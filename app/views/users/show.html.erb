@@ -19,7 +19,7 @@
       <% else %>
         <%= image_tag 'default.jpg', class: 'avatar' %>
       <% end %>
-      <span class="right-container__profile__name"><%= current_user.name %></span>
+      <span class="right-container__profile__name"><%= @user.name %></span>
       <span class="right-container__profile__follow">
         <%= link_to followers_user_path(@user.id) do %>
     フォロワー<%= @user.followers.count %>人
