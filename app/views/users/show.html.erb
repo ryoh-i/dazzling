@@ -1,24 +1,47 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-<%= @user.name %>
+<!--suppress ALL -->
 
-<div class="follower">
-  <%= link_to followers_user_path(@user.id) do %>
-    <p id="follower_count">フォロワー<%= @user.followers.count %>人</p>
-  <% end %>
-</div>
-<div class="follow">
-  <%= link_to following_user_path(@user.id) do %>
-    <p id="following_count">フォロー<%= @user.following.count %>人</p>
-  <% end %>
-</div>
-<div>
-  <%= render "follow_form" %>
+<!--タイトル-->
+<div class="post__title">
+  <div class="balloon">ユーザー詳細ページ</div>
+  <!--  <h1 class="post__title__font">口コミ一覧(ホーム）</h1>-->
+  <p class="post_title_guide">
+    このページでは、自分及び登録ユーザーのプロフィールを閲覧できます。<br>
+    また、フォロワー同士であればダイレクトメッセージを送ることができます。
+  </p>
 </div>
 
-<% if current_user.id == @user.id %>
-  <%= link_to "ユーザー情報を編集する", edit_user_registration_path %>
-<% end %>
+<div class="profile-card">
+  <!--タイトル-->
+  <div class="right-container">
+    <div class="right-container__profile">
+      <% if current_user.image? %>
+        <p><%= image_tag current_user.image.to_s, class: 'avatar' %></p>
+      <% else %>
+        <%= image_tag 'default.jpg', class: 'avatar' %>
+      <% end %>
+      <span class="right-container__profile__name"><%= current_user.name %></span>
+      <span class="right-container__profile__follow">
+        <%= link_to followers_user_path(@user.id) do %>
+    フォロワー<%= @user.followers.count %>人
+  <% end %>
+        <%= link_to following_user_path(@user.id) do %>
+    フォロー<%= @user.following.count %>人
+  <% end %>
+    </span>
+
+      <div class="card border-dark mb-3" style="max-width: 18rem;">
+        <div class="card-body text-dark">
+          <p class="card-text"><%= current_user.profile %></p>
+        </div>
+      </div>
+
+      <% if current_user.id == @user.id %>
+        <%= link_to "プロフィール編集", edit_user_registration_path, class: "post__menu__list__button right-container__profile__button" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
 
 <!--ダイレクトメッセージ機能-->
 <!--ログインユーザーでなければ、true-->
@@ -38,3 +61,4 @@
     <% end %>
   <% end %>
 <% end %>
+<!--ダイレクトメッセージ機能ここまで-->
