@@ -73,6 +73,7 @@
   </div>
   <!--口コミ投稿一覧メインここまで-->
 
+  <!--サイドメニュー-->
   <div class="right-container">
     <div class="right-container__profile">
       <% if current_user.image? %>
@@ -85,13 +86,17 @@
       <%= link_to "プロフィール詳細", user_path(current_user), class: "post__menu__list__button right-container__profile__button" %>
     </div>
 
-    <span class="tag-container__title">タグから探す</span>
+    <!--サイドメニュータグ一覧機能-->
+  <span class="tag-container__title">タグから探す</span>
     <div class="tag-container">
-      <% @tags.each do |tag| %>
+      <% @posts.each do |post| %>
+    <% post.tag_list.each do |tag| %>
         <div class="tag-container__tags">
           <p class="tag-container__tag"><%= link_to tag, posts_path(tag_name: tag) %></p>
         </div>
       <% end %>
+    <% end %>
+      <!--サイドメニュータグ一覧機能ここまで-->
 
       <button type="button" class="post__menu__list__button">もっと表示</button>
       <!--この下の画像はXDで切り出して挿入してください-->
@@ -103,6 +108,7 @@
     </div>
   </div>
 </div>
+<!--サイドメニューここまで-->
 
 <!--kaminari ページネーション-->
 <%= paginate @posts %>

@@ -30,7 +30,7 @@
         <%= link_to "登録ユーザー一覧", users_path, class: "header__nav__button" %>
             </div>
       <% else %>
-        <%= link_to "dazzling", new_user_registration_path, class: "header__nav__button" %>
+        <%= link_to "HOME", root_path, class: "header__nav__button" %>
         <%= link_to "アカウント作成", new_user_registration_path, class: "header__nav__button" %>
         <%= link_to "ログイン", new_user_session_path, class: "header__nav__button" %>
         <%= link_to "ゲストログイン", users_guest_sign_in_path, class: "header__nav__button", method: :post %>
