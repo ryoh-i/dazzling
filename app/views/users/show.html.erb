@@ -10,8 +10,8 @@
   </p>
 </div>
 
+<div class="profile-senter">
 <div class="profile-card">
-  <!--タイトル-->
   <div class="right-container">
     <div class="right-container__profile">
       <% if current_user.image? %>
@@ -41,9 +41,10 @@
     </div>
   </div>
 </div>
+</div>
 
 
-<!--ダイレクトメッセージ機能-->
+  <!--ダイレクトメッセージ機能-->
 <!--ログインユーザーでなければ、true-->
 <% unless @user.id == current_user.id %>
   <!--お互いにフォローされていれば、true-->
