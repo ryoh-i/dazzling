@@ -88,15 +88,13 @@
     </div>
 
     <!--サイドメニュータグ一覧機能-->
-  <span class="tag-container__title">タグから探す</span>
+    <span class="tag-container__title">タグから探す</span>
     <div class="tag-container">
-      <% @posts.each do |post| %>
-    <% post.tag_list.each do |tag| %>
-        <div class="tag-container__tags">
-          <p class="tag-container__tag"><%= link_to tag, posts_path(tag_name: tag) %></p>
-        </div>
-      <% end %>
-    <% end %>
+      <div class="tag-container__tags">
+        <% @tags.each do |tag| %>
+          <span class="tag-container__tag"><%= link_to tag, posts_path(tag_name: tag.name) %></span>
+        <% end %>
+      </div>
       <!--サイドメニュータグ一覧機能ここまで-->
 
       <button type="button" class="post__menu__list__button">もっと表示</button>
