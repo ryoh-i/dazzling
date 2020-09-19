@@ -35,11 +35,10 @@ class UsersController < ApplicationController
 
   def destroy; end
 
-  def follows
+  def following
     # @userがフォローしているユーザー
     @user = User.find(params[:id])
     @users = @user.following
-    # render 'show_follow'
   end
 
   def followers

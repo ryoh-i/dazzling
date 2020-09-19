@@ -17,6 +17,7 @@
 </head>
 
 <body>
+<div style="min-height: 100vh;">
 <header class="header">
   <nav class="header__nav">
     <%= image_tag 'dazzling-logo.png', :class => 'header__nav__logo', :alt => 'Dazzling Logo' %>
@@ -28,7 +29,6 @@
         <%= link_to "プロフィール編集", edit_user_registration_path, class: "header__nav__button" %>
         <%= link_to "ユーザー詳細ページ", user_path(current_user), class: "header__nav__button" %>
         <%= link_to "登録ユーザー一覧", users_path, class: "header__nav__button" %>
-            </div>
       <% else %>
         <%= link_to "HOME", root_path, class: "header__nav__button" %>
         <%= link_to "アカウント作成", new_user_registration_path, class: "header__nav__button" %>
@@ -48,5 +48,6 @@
 
 <!--アイコンCDN-->
 <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</div>
 </body>
 </html>
