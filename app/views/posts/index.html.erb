@@ -16,8 +16,8 @@
   <ul class="post__menu__list">
     <%= link_to "口コミ一覧", posts_path, class: "post__menu__list__li li-active" %>
     <li class="post__menu__list__li">お気に入り</li>
-    <li class="post__menu__list__li">フォロー</li>
-    <li class="post__menu__list__li">フォロワー</li>
+    <%= link_to "フォロー", following_user_path(current_user.id), class: "post__menu__list__li li-active" %>
+    <%= link_to "フォロワー", followers_user_path(current_user.id), class: "post__menu__list__li li-active" %>
     <%= link_to "新規投稿", new_post_path, class: "post__menu__list__button" %>
   </ul>
 
@@ -101,8 +101,8 @@
       <!--この下の画像はXDで切り出して挿入してください-->
     </div>
     <div class="vulnerability-diagnosis">
-      <span class="vulnerability-diagnosis__title">脆弱性診断自動化について</span>
-      <p class="vulnerability-diagnosis__text">本ポートフォリオを実装した脆弱性診断の自動化についての詳細をおまとめいたしました。</p>
+      <span class="vulnerability-diagnosis__title">テストコメント</span>
+      <p class="vulnerability-diagnosis__text">テストコメント</p>
       <button type="button" class="post__menu__list__button">専用ページへ</button>
     </div>
   </div>

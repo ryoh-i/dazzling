@@ -99,7 +99,9 @@
 .home-font{
   font-family: 'Noto Serif JP', sans-serif;
   font-size: 25px;
-  word-wrap:break-all;
+  //word-wrap:break-all;
+  //word-wrap: break-word;
+  word-break: break-all;
 }
 
 
