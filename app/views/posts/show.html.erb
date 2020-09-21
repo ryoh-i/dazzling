@@ -1,18 +1,15 @@
 <h1>口コミ詳細</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
 
-<% if @post.image? %>
-  <div class="card mb-3">
-    <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap">
-      <title>Placeholder</title>
-      <rect fill="#868e96" width="100%" height="100%"/>
-      <text fill="#dee2e6" dy=".3em" x="50%" y="50%"><%= @post.image %></text>
-    </svg>
-<% else %>
-  <div class="card-body">
-    <h5 class="card-title"><%= @post.title %></h5>
-    <p class="card-text">T<%= @post.content %></p>
-    <p class="card-text"><small class="text-muted"><%= @post.created_at %></small></p>
+<div class="show__card">
+  <div class="card bg-light mb-3" style="max-width: 18rem;">
+    <div class="card-header"><%= @post.title %></div>
+    <div class="card-body">
+      <h5 class="card-title"><%= @post.created_at %></h5>
+      <p class="card-text"><%= @post.content %></p>
+    </div>
+  </div>
+</div>
+
     <!--星評価機能表示-->
     <div id="star-rate-<%= @post.id %>"></div>
     <script>
@@ -27,13 +24,12 @@
         });
     </script>
     <!--星評価機能表示ここまで-->
+
+
     <p class="card-text"><small class="text-muted">お気に入り件数：<%= @post.favorites.count %></small></p>
     <div id="favorites_buttons_<%= @post.id %>">
       <%= render partial: 'favorites/favorite', locals: {post: @post} %>
     </div>
-  </div>
-  </div>
-<% end %>
 
 <!--投稿に紐づいたユーザーとログインユーザーが同一であれば、True-->
 <% if @post.user_id == current_user.id %>
@@ -65,3 +61,5 @@
   </div>
   <div class="show__maps" id="show_map" style="height: 320px; width: 400px;"></div>
 </div>
+
+
