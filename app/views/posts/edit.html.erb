@@ -1,14 +1,16 @@
-<div class="container">
-  <h1>投稿編集ページ</h1>
-</div>
+<h1>投稿編集ページ</h1>
 
 <%= form_with model: @post do |f| %>
-  <p><%= f.label :title %></p>
-  <p><%= f.text_field :title %></p>
-  <p><%= f.label :content %></p>
-  <p><%= f.text_area :content %></p>
-  <p><%= f.label :image %></p>
-  <p><%= f.file_field :image %></p>
+  <div class="form-group">
+    <%= f.label :title %><br/>
+    <%= f.text_field :title, autofocus: true, autocomplete: "title", class: "form-control", id: "formGroupExampleInput", placeholder: "作品名等" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :content %><br/>
+    <%= f.text_area :content, autofocus: true, autocomplete: "content", class: "form-control", id: "exampleFormControlTextarea1", rows: "3", placeholder: "観劇した感想" %>
+  </div>
+
   <!--星評価機能フォーム-->
   <div class="form-group row" id="star">
     <%= f.label :rate, '評価', class: "col-md-3 col-form-label" %>
@@ -18,17 +20,31 @@
   <!--星星評価機能Javascript読み込み-->
   <script>
       $('#star').raty({
-          size     : 36,
-          starOff:  '<%= asset_path('star-off.png') %>',
-          starOn : '<%= asset_path('star-on.png') %>',
+          size: 36,
+          starOff: '<%= asset_path('star-off.png') %>',
+          starOn: '<%= asset_path('star-on.png') %>',
           starHalf: '<%= asset_path('star-half.png') %>',
           scoreName: 'post[rate]',
           half: true,
       });
   </script>
-  <%= f.submit "投稿内容を編集する"%>
+
+  <form>
+    <div class="spot">
+      <input id="address" type="text" placeholder="検索する住所">
+      <input onclick="codeAddress()" type="button" value="検索する">
+      <div id="map" style="width:640px; height:320px"></div>
+    </div>
+  </form>
+
+  <div class="post-new-btn">
+    <button onclick="document.getElementsByTagName('form')[0].submit()" class="btn btn-primary btn-lg"><%= f.submit "投稿内容を編集する" %></button>
+  </div>
+
 <% end %>
 
-<% if @post.user_id == current_user.id %>
-  <%= link_to "削除する", post_path(@post.id), method: :delete %>
-<% end %>
+<div class="post-edit-btn">
+  <% if @post.user_id == current_user.id %>
+    <%= link_to "削除する", post_path(@post.id), method: :delete %>
+  <% end %>
+</div>
