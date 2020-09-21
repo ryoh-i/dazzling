@@ -2,6 +2,7 @@
 舞台観劇を通して繋がる、簡単な口コミサービスです。
 
 ![dazzling_home](https://user-images.githubusercontent.com/55808655/93812414-8a0dc280-fc8c-11ea-8033-9996d6f8d8d2.png)
+![スクリーンショット 2020-09-22 5 40 10（2）](https://user-images.githubusercontent.com/55808655/93819108-44ee8e00-fc96-11ea-864b-c0ac34cf7ea8.png)
 
 ## URL
 AWSへデプロイ作業中、近日公開
