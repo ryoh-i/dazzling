@@ -1,3 +1,4 @@
+<div class="back">
 <!--テストコメント-->
 <div class="row">
   <div class="col-12"><!--ページ説明 start-->
@@ -50,19 +51,18 @@
         </li>
       </ul>
       <hr>
-      <% if user_signed_in? %>
-        <div class="row">
-          <div class="col-12">
-            <div class="comment-create">
-              <p class="text-left">コメントを投稿する</p>
-              <%= render partial: 'comments/form', locals: {comment: @comment, post: @post} %>
-            </div>
-          </div>
-        </div>
-      <% end %>
     </div>
   </div><!--コメント説明 end-->
-
+  <% if user_signed_in? %>
+    <div class="row">
+      <div class="col-12">
+        <div class="comment-create">
+          <p class="text-left">コメントを投稿する</p>
+          <%= render partial: 'comments/form', locals: {comment: @comment, post: @post} %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
 
 
@@ -71,4 +71,5 @@
     <% @post.spot.address %>
   </div>
   <div class="show__maps" id="show_map" style="height: 320px; width: 400px;"></div>
+</div>
 </div>
