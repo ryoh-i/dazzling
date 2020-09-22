@@ -1,80 +1,89 @@
 <div class="post__show">
+  <h1>口コミ詳細</h1>
+
 
   <div class="row">
-  <div class="col-12"><!--ページ説明 start-->
-    <h1>口コミ詳細</h1>
-  </div><!--ページ説明 end-->
-</div>
-<div class="row">
-  <div class="col-6"><!--タイトル start-->
-    <%= @post.title %>
-  </div><!--タイトル end-->
-</div>
-<div class="row">
-  <div class="col-12"><!--説明 start-->
-    <%= @post.content %>
-  </div><!--説明 end-->
-</div>
-<div class="row">
-  <div class="col-6"><!--時刻：タグ start-->
-    <%= @post.created_at %>
-  </div><!--時刻：タグ end-->
-  <div class="col-6"><!--お気に入り start-->
-    <div id="star-rate-<%= @post.id %>"></div>
-    <script>
-        $('#star-rate-<%= @post.id %>').raty({
-            size: 36,
-            starOff: '<%= asset_path('star-off.png') %>',
-            starOn: '<%= asset_path('star-on.png') %>',
-            starHalf: '<%= asset_path('star-half.png') %>',
-            half: true,
-            readOnly: true,
-            score: <%= @post.rate %>,
-        });
-    </script>
-  </div><!--お気に入り end-->
-</div>
-<div class="row">
-  <div class="col-12"><!--隙間 start-->
-  </div><!--隙間 end-->
-</div>
-<div class="row">
-  <div class="col-12"><!--コメントタイトル start-->
-    <h3>口コミへのコメント</h3>
-  </div><!--コメントタイトル end-->
-
-  <div class="col-12"><!--コメント説明 start-->
-    <div class="row">
-      <ul style="padding-left: 50px">
-        <li id="comments_area">
-          <%= render partial: 'comments/index', locals: {comments: @comments} %>
-        </li>
-      </ul>
-      <hr>
-    </div>
-  </div><!--コメント説明 end-->
-  <% if user_signed_in? %>
-    <div class="row">
-      <div class="col-12">
-        <div class="comment-create">
-          <p class="text-left">コメントを投稿する</p>
-          <%= render partial: 'comments/form', locals: {comment: @comment, post: @post} %>
-        </div>
-      </div>
-    </div>
-  <% end %>
-</div>
 
 
-<div class="show">
-  <div class="show__address">
-    <% @post.spot.address %>
   </div>
-  <div class="show__maps" id="show_map" style="height: 320px; width: 400px;"></div>
-</div>
+  <div class="row">
+    <div class="col-6"><!--タイトル start-->
+      <h2><%= @post.title %></h2>
+    </div><!--タイトル end-->
+  </div>
+  <div class="row">
+    <div class="col-12"><!--説明 start-->
+      <%= @post.content %>
+    </div><!--説明 end-->
+  </div>
+  <div class="row">
+    <div class="col-6"><!--時刻：タグ start-->
+      <%= @post.created_at %>
+    </div><!--時刻：タグ end-->
+    <div class="col-6"><!--お気に入り start-->
+      <div id="star-rate-<%= @post.id %>"></div>
+      <script>
+          $('#star-rate-<%= @post.id %>').raty({
+              size: 36,
+              starOff: '<%= asset_path('star-off.png') %>',
+              starOn: '<%= asset_path('star-on.png') %>',
+              starHalf: '<%= asset_path('star-half.png') %>',
+              half: true,
+              readOnly: true,
+              score: <%= @post.rate %>
+          });
+      </script>
+
+      <p class="card-text"><small class="text-muted">お気に入り件数：<%= @post.favorites.count %></small></p>
+
+      <div class="fav" id="favorites_buttons_<%= @post.id %>">
+        <%= render partial: 'favorites/favorite', locals: {post: @post} %>
+      </div>
+
+    </div><!--お気に入り end-->
+  </div>
+
+  <div class="show">
+    <div class="show__address">
+      <% @post.spot.address %>
+    </div>
+    <div class="show__maps" id="show_map" style="height: 320px; width: 850px;"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-12"><!--隙間 start-->
+    </div><!--隙間 end-->
+  </div>
+  <div class="row">
+    <div class="col-12"><!--コメントタイトル start-->
+      <% if user_signed_in? %>
+        <div class="row">
+          <div class="col-12">
+            <div class="comment-create">
+              <p class="text-left">コメントを投稿する</p>
+              <%= render partial: 'comments/form', locals: {comment: @comment, post: @post} %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div><!--コメントタイトル end-->
+
+    <div class="col-12"><!--コメント説明 start-->
+      <div class="row">
+        <ul style="padding-left: 50px">
+          <li id="comments_area">
+            <%= render partial: 'comments/index', locals: {comments: @comments} %>
+          </li>
+        </ul>
+        <hr>
+      </div>
+    </div><!--コメント説明 end-->
+  </div>
+  <div class="show__button">
+    <% if @post.user_id == current_user.id %>
+      <p><%= link_to "投稿を編集する", edit_post_path(@post.id), class: "header__nav__button__show" %></p>
+      <p><%= link_to "削除する", post_path(@post.id), method: :delete, class: "header__nav__button__show" %></p>
+    <% end %>
+  </div>
 </div>
 
-<% if @post.user_id == current_user.id %>
-  <%= link_to "投稿を編集する", edit_post_path(@post.id) %>
-  <%= link_to "削除する", post_path(@post.id), method: :delete %>
-<% end %>

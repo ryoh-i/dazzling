@@ -2,7 +2,7 @@
 <% @entries.each do |e| %>
   <div class="user-name">
     <strong>
-      <%= image_tag current_user.image.to_s, class: "user-image" %>
+      <!--%= image_tag current_user.image.to_s, class: "user-image" %-->
       <a class="rooms-user-link" href="/users/<%= e.user.id %>">
         <%= e.user.name %>さん
       </a>
@@ -17,7 +17,7 @@
         <div class="chat-box">
           <div class="chat-face">
             <% if m.user.image? %>
-              <%= image_tag m.user.image.to_s, class: "user-image" %>
+              <!--%= image_tag m.user.image.to_s, class: "user-image" %-->
             <% end %>
           </div>
           <div class="chat-hukidashi"><strong><%= m.content %></strong> <br>
