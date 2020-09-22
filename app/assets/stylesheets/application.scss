@@ -247,3 +247,45 @@ form {
   letter-spacing: 0px;
   opacity: 1;
 }
+
+.post__show{
+  background-color: #f9f9f9;
+  align-content: center;
+  padding: 0 300px
+}
+
+.col-12 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.show__button {
+  padding: 0 200px;
+}
+
+
+.header__nav__button__show {
+  width: 400px;
+  height: 44px;
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+  background: transparent linear-gradient(91deg, #6294A2 0%, #58C3DD 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 10px #0000001C;
+  border-radius: 22px;
+  opacity: 1;
+  font-size: 17px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  color: #F0F0F0;
+}
+
+.fav p {
+  display:inline;
+}
+
+.btn{
+  display:inline;
+}
+

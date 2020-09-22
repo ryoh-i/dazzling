@@ -12,7 +12,7 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
   mount_uploader :image, ImageUploader
   validates :title, presence: true, length: { maximum: 15 }
-  validates :content, presence: true, length: { maximum: 160 }
+  validates :content, presence: true
 
   #タグ機能でtagsの中にID、名前が入る
   acts_as_taggable
