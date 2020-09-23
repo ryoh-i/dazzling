@@ -14,7 +14,7 @@ class Post < ApplicationRecord
   validates :title, presence: true, length: { maximum: 15 }
   validates :content, presence: true
 
-  #タグ機能でtagsの中にID、名前が入る
+  # タグ機能でtagsの中にID、名前が入る
   acts_as_taggable
 
   def self.search(search)
