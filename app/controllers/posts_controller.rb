@@ -8,11 +8,8 @@ class PostsController < ApplicationController
     @posts = Post.search(params[:search]).page(params[:page]).per(6)
 
     # タグにて絞り込み
-    if params[:tag_name]
-      @posts = Post.tagged_with("#{params[:tag_name]}").page(params[:page]).per(6)
-    end
+    @posts = Post.tagged_with(params[:tag_name].to_s).page(params[:page]).per(6) if params[:tag_name]
     @tags = ActsAsTaggableOn::Tag.all
-
   end
 
   # 投稿詳細ページのアクション

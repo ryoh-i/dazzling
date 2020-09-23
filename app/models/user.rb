@@ -56,7 +56,7 @@ class User < ApplicationRecord
   end
 
   # nameが空、ユニーク、最大が10文字以下であるように
-  validates :name, presence: true, uniqueness: true, length: {maximum: 10}
+  validates :name, presence: true, uniqueness: true, length: { maximum: 10 }
   # profileが200文字以下であるように
   validates :profile, length: { maximum: 200 }
 end
