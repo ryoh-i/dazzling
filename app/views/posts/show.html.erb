@@ -1,10 +1,6 @@
 <div class="post__show">
   <h1>口コミ詳細</h1>
-
-
   <div class="row">
-
-
   </div>
   <div class="row">
     <div class="col-6"><!--タイトル start-->
@@ -17,10 +13,10 @@
     </div><!--説明 end-->
   </div>
   <div class="row">
-    <div class="col-6"><!--時刻：タグ start-->
+    <div class="col-4"><!--時刻：タグ start-->
       <%= @post.created_at %>
     </div><!--時刻：タグ end-->
-    <div class="col-6"><!--お気に入り start-->
+    <div class="col-4"><!--お気に入り start-->
       <div id="star-rate-<%= @post.id %>"></div>
       <script>
           $('#star-rate-<%= @post.id %>').raty({
@@ -33,23 +29,18 @@
               score: <%= @post.rate %>
           });
       </script>
-
       <p class="card-text"><small class="text-muted">お気に入り件数：<%= @post.favorites.count %></small></p>
-
-      <div class="fav" id="favorites_buttons_<%= @post.id %>">
-        <%= render partial: 'favorites/favorite', locals: {post: @post} %>
-      </div>
-
     </div><!--お気に入り end-->
+    <div class="col-4 fav" id="favorites_buttons_<%= @post.id %>"><!-- fav start -->
+      <%= render partial: 'favorites/favorite', locals: {post: @post} %>
+    </div><!-- fav end -->
   </div>
-
   <div class="show">
     <div class="show__address">
       <% @post.spot.address %>
     </div>
     <div class="show__maps" id="show_map" style="height: 320px; width: 850px;"></div>
   </div>
-
   <div class="row">
     <div class="col-12"><!--隙間 start-->
     </div><!--隙間 end-->
@@ -67,7 +58,6 @@
         </div>
       <% end %>
     </div><!--コメントタイトル end-->
-
     <div class="col-12"><!--コメント説明 start-->
       <div class="row">
         <ul style="padding-left: 50px">
@@ -86,4 +76,3 @@
     <% end %>
   </div>
 </div>
-
