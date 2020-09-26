@@ -14,7 +14,7 @@ HOME画面の左端及び下部分に"ゲストログイン"のボタンを押�
 ## 使用技術
 - Ruby -ver 2.7.0 / Rails -ver 5.2.4.3
 - HTML (erb), Scss, Bootstrap4, JavaScript, jQuery
-- AWS(VPC, EC2, RDS for MySQL)
+- AWS(VPC, EC2, RDS for MySQL, Route53)
 - GoogleMapsAPI
 - RSpec(現状は、user、post部分のみ)
 
