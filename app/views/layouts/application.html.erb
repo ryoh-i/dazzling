@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Dazzling</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= Gon::Base.render_data %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_KEY'] %>">
+  </script>
+  <script src="//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js" type="text/javascript"></script>
+  <script>
+      $(initMap)
+  </script>
+</head>
 
-<div class="footer__calc">
-  <head>
-    <title>Dazzling</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= Gon::Base.render_data %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_KEY'] %>">
-    </script>
-    <script src="//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js" type="text/javascript"></script>
-    <script>
-        $(initMap)
-    </script>
-  </head>
+<body>
+<div style="min-height: 100vh;">
+  <header class="header">
+    <nav class="header__nav">
+      <%= image_tag 'dazzling-logo.png', :class => 'header__nav__logo', :alt => 'Dazzling Logo' %>
+      <div class="header__nav__button-container">
+        <% if user_signed_in? %>
+          <%= link_to "ログアウト", destroy_user_session_path, class: "header__nav__button", method: :delete %>
+          <%= link_to "口コミ一覧", posts_path, class: "header__nav__button" %>
+          <%= link_to "新規投稿", new_post_path, class: "header__nav__button" %>
+          <%= link_to "プロフィール編集", edit_user_registration_path, class: "header__nav__button" %>
+          <%= link_to "ユーザー詳細ページ", user_path(current_user), class: "header__nav__button" %>
+          <%= link_to "登録ユーザー一覧", users_path, class: "header__nav__button" %>
+        <% else %>
+          <%= link_to "HOME", root_path, class: "header__nav__button" %>
+          <%= link_to "アカウント作成", new_user_registration_path, class: "header__nav__button" %>
+          <%= link_to "ログイン", new_user_session_path, class: "header__nav__button" %>
+          <%= link_to "ゲストログイン", users_guest_sign_in_path, class: "header__nav__button", method: :post %>
+          <!--    user_signed_in?は<%#= user_signed_in? %>となっている-->
+        <% end %>
+      </div>
+    </nav>
 
-  <div>
-    <div style="min-height: 100vh;">
-      <header class="header">
-        <nav class="header__nav">
-          <%= image_tag 'dazzling-logo.png', :class => 'header__nav__logo', :alt => 'Dazzling Logo' %>
-          <div class="header__nav__button-container">
-            <% if user_signed_in? %>
-              <%= link_to "ログアウト", destroy_user_session_path, class: "header__nav__button", method: :delete %>
-              <%= link_to "口コミ一覧", posts_path, class: "header__nav__button" %>
-              <%= link_to "新規投稿", new_post_path, class: "header__nav__button" %>
-              <%= link_to "プロフィール編集", edit_user_registration_path, class: "header__nav__button" %>
-              <%= link_to "ユーザー詳細ページ", user_path(current_user), class: "header__nav__button" %>
-              <%= link_to "登録ユーザー一覧", users_path, class: "header__nav__button" %>
-            <% else %>
-              <%= link_to "HOME", root_path, class: "header__nav__button" %>
-              <%= link_to "アカウント作成", new_user_registration_path, class: "header__nav__button" %>
-              <%= link_to "ログイン", new_user_session_path, class: "header__nav__button" %>
-              <%= link_to "ゲストログイン", users_guest_sign_in_path, class: "header__nav__button", method: :post %>
-              <!--    user_signed_in?は<%#= user_signed_in? %>となっている-->
-            <% end %>
-          </div>
-        </nav>
-      </header>
-      <%= yield %>
-      <footer class="footer">
-        <%= image_tag 'dazzling-logo.png', :class => 'header__nav__logo', :alt => 'Dazzling Logo' %>
-        <span class="footer_text">© 2020</span>
-      </footer>
-    </div>
+  </header>
+
+  <div style="min-height:calc(100% - 70px - 117px)">
+    <%= yield %>
   </div>
+
+  <footer class="footer">
+    <%= image_tag 'dazzling-logo.png', :class => 'header__nav__logo', :alt => 'Dazzling Logo' %>
+    <span class="footer_text">© 2020</span>
+  </footer>
 
   <!--アイコンCDN-->
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
