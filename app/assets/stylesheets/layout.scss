@@ -41,6 +41,11 @@
   color: #F0F0F0;
 }
 
+
+.footer__calc{
+  min-height: calc(100% - 220px);
+}
+
 .footer {
   display: flex;
   /*position: fixed;

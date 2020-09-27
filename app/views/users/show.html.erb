@@ -11,42 +11,43 @@
 </div>
 
 <div class="profile-senter">
-<div class="profile-card">
-  <div class="right-container">
-    <div class="right-container__profile__users">
-      <% if current_user.image? %>
-        <p><%= image_tag current_user.image.to_s, class: 'avatar' %></p>
-      <% else %>
-        <%= image_tag 'default.jpg', class: 'avatar' %>
-      <% end %>
-      <span class="right-container__profile__name"><%= @user.name %></span>
-      <span class="right-container__profile__follow">
+  <div class="profile-card">
+    <div class="right-container">
+      <div class="right-container__profile__users">
+        <% if current_user.image? %>
+          <p><%= image_tag current_user.image.to_s, class: 'avatar' %></p>
+        <% else %>
+          <%= image_tag 'default.jpg', class: 'avatar' %>
+        <% end %>
+        <span class="right-container__profile__name"><%= @user.name %></span>
+        <span class="right-container__profile__follow">
         <%= link_to followers_user_path(@user.id) do %>
     フォロワー<%= @user.followers.count %>人
   <% end %>
-        <%= link_to following_user_path(@user.id) do %>
+          <%= link_to following_user_path(@user.id) do %>
     フォロー<%= @user.following.count %>人
   <% end %>
     </span>
 
-      <div class="card border-dark mb-3" style="max-width: 18rem;">
-        <div class="card-body text-dark">
-          <p class="card-text"><%= current_user.profile %></p>
-        </div>
+        <% if current_user.profile? %>
+          <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card-body text-dark">
+              <p class="card-text"><%= current_user.profile %></p>
+            </div>
+          </div>
+        <% end %>
+        <% if current_user.id == @user.id %>
+          <%= link_to "プロフィール編集", edit_user_registration_path, class: "post__menu__list__button right-container__profile__button" %>
+        <% end %>
       </div>
-
-      <% if current_user.id == @user.id %>
-        <%= link_to "プロフィール編集", edit_user_registration_path, class: "post__menu__list__button right-container__profile__button" %>
-      <% end %>
     </div>
   </div>
-</div>
 </div>
 
 <%= render "follow_form" %>
 
 
-  <!--ダイレクトメッセージ機能-->
+<!--ダイレクトメッセージ機能-->
 <!--ログインユーザーでなければ、true-->
 <% unless @user.id == current_user.id %>
   <!--お互いにフォローされていれば、true-->
