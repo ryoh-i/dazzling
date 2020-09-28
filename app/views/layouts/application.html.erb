@@ -17,36 +17,41 @@
 
 <body>
 <div style="min-height: 100vh;">
-<header class="header">
-  <nav class="header__nav">
+  <header class="header">
+    <nav class="header__nav">
+      <%= image_tag 'dazzling-logo.png', :class => 'header__nav__logo', :alt => 'Dazzling Logo' %>
+      <div class="header__nav__button-container">
+        <% if user_signed_in? %>
+          <%= link_to "ログアウト", destroy_user_session_path, class: "header__nav__button", method: :delete %>
+          <%= link_to "口コミ一覧", posts_path, class: "header__nav__button" %>
+          <%= link_to "新規投稿", new_post_path, class: "header__nav__button" %>
+          <%= link_to "プロフィール編集", edit_user_registration_path, class: "header__nav__button" %>
+          <%= link_to "ユーザー詳細ページ", user_path(current_user), class: "header__nav__button" %>
+          <%= link_to "登録ユーザー一覧", users_path, class: "header__nav__button" %>
+        <% else %>
+          <%= link_to "HOME", root_path, class: "header__nav__button" %>
+          <%= link_to "アカウント作成", new_user_registration_path, class: "header__nav__button" %>
+          <%= link_to "ログイン", new_user_session_path, class: "header__nav__button" %>
+          <%= link_to "ゲストログイン", users_guest_sign_in_path, class: "header__nav__button", method: :post %>
+          <!--    user_signed_in?は<%#= user_signed_in? %>となっている-->
+        <% end %>
+      </div>
+    </nav>
+
+  </header>
+
+
+  <div style="min-height:calc(100vh - 70px - 117px)">
+    <%= yield %>
+  </div>
+
+  <footer class="footer">
     <%= image_tag 'dazzling-logo.png', :class => 'header__nav__logo', :alt => 'Dazzling Logo' %>
-    <div class="header__nav__button-container">
-      <% if user_signed_in? %>
-        <%= link_to "ログアウト", destroy_user_session_path, class: "header__nav__button", method: :delete %>
-        <%= link_to "口コミ一覧", posts_path, class: "header__nav__button" %>
-        <%= link_to "新規投稿", new_post_path, class: "header__nav__button" %>
-        <%= link_to "プロフィール編集", edit_user_registration_path, class: "header__nav__button" %>
-        <%= link_to "ユーザー詳細ページ", user_path(current_user), class: "header__nav__button" %>
-        <%= link_to "登録ユーザー一覧", users_path, class: "header__nav__button" %>
-      <% else %>
-        <%= link_to "HOME", root_path, class: "header__nav__button" %>
-        <%= link_to "アカウント作成", new_user_registration_path, class: "header__nav__button" %>
-        <%= link_to "ログイン", new_user_session_path, class: "header__nav__button" %>
-        <%= link_to "ゲストログイン", users_guest_sign_in_path, class: "header__nav__button", method: :post %>
-        <!--    user_signed_in?は<%#= user_signed_in? %>となっている-->
-      <% end %>
-    </div>
-  </nav>
-</header>
+    <span class="footer_text">© 2020</span>
+  </footer>
 
-<%= yield %>
-<footer class="footer">
-  <%= image_tag 'dazzling-logo.png', :class => 'header__nav__logo', :alt => 'Dazzling Logo' %>
-  <span class="footer_text">© 2020</span>
-</footer>
-
-<!--アイコンCDN-->
-<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <!--アイコンCDN-->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </div>
 </body>
 </html>
