@@ -22,7 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # original gem
 gem 'acts-as-taggable-on', '~> 6.0'
-gem 'bootstrap'
+gem 'bootstrap', '~> 4.1.1'
 gem 'carrierwave'
 gem 'devise'
 gem 'dotenv-rails'
@@ -38,6 +38,7 @@ gem 'rails-i18n'
 gem 'rmagick'
 gem 'rspec-rails'
 gem 'underscore-rails'
+gem 'mini_racer'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

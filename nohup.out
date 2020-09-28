@@ -1,0 +1,961 @@
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/stack.rb:37: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/static.rb:111: warning: The called method `initialize' is defined here
+=> Booting Puma
+=> Rails 5.2.4.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.6 (ruby 2.7.0-p0), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/posts/new" for 36.13.134.99 at 2020-09-28 15:00:38 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#new as HTML
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activemodel-5.2.4.3/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activemodel-5.2.4.3/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionview-5.2.4.3/lib/action_view/view_paths.rb:11: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionview-5.2.4.3/lib/action_view/lookup_context.rb:128: warning: The called method `template_exists?' is defined here
+  Rendering posts/new.html.erb within layouts/application
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activemodel-5.2.4.3/lib/active_model/translation.rb:67: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/i18n-1.8.3/lib/i18n.rb:195: warning: The called method `translate' is defined here
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/acts-as-taggable-on-6.5.0/lib/acts_as_taggable_on/tagging.rb:9: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/associations.rb:1653: warning: The called method `belongs_to' is defined here
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/relation/delegation.rb:132: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/relation.rb:25: warning: The called method `initialize' is defined here
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionview-5.2.4.3/lib/action_view/helpers/form_helper.rb:755: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionview-5.2.4.3/lib/action_view/helpers/form_helper.rb:1521: warning: The called method `html_options_for_form_with' is defined here
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/abstract_controller/helpers.rb:67: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_controller/metal/request_forgery_protection.rb:307: warning: The called method `form_authenticity_token' is defined here
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.4.3/lib/active_support/messages/rotator.rb:28: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.4.3/lib/active_support/messages/rotator.rb:6: warning: The called method `initialize' is defined here
+  Rendered posts/new.html.erb within layouts/application (290.4ms)
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:24
+Completed 200 OK in 484ms (Views: 375.4ms | ActiveRecord: 69.3ms)
+
+
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/cookies.rb:647: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.4.3/lib/active_support/message_encryptor.rb:150: warning: The called method `encrypt_and_sign' is defined here
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.4.3/lib/active_support/message_encryptor.rb:175: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.4.3/lib/active_support/messages/metadata.rb:17: warning: The called method `wrap' is defined here
+Started DELETE "/users/sign_out" for 36.13.134.99 at 2020-09-28 15:00:40 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ri94ULbCXHPoiN1CmGauFR9uz5JHcZSyXbQG+z6Ngnvqr90roIEfuUG54+jPhzVYEa275jc5DRbLsiEg5RBYhQ=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/transactions.rb:212: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/database_statements.rb:260: warning: The called method `transaction' is defined here
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/transaction.rb:171: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/transaction.rb:97: warning: The called method `initialize' is defined here
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/persistence.rb:705: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/timestamp.rb:105: warning: The called method `_update_record' is defined here
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Redirected to https://dazzling-app.tokyo/
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 36.13.134.99 at 2020-09-28 15:00:40 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 64ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:00:42 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 65ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:00:49 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 110ms (Views: 109.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:01:12 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 92ms (Views: 91.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:01:19 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 100ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 36.13.134.99 at 2020-09-28 15:01:34 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 99ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/guest_sign_in" for 36.13.134.99 at 2020-09-28 15:01:36 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new_guest as HTML
+  Parameters: {"authenticity_token"=>"cS9KrYgGXYOz22hQ5sChJf9Xh5n0F2l/HNKgk+nIZafwd4pyOQvt2LJDbtOvA729desxjljjVMRW8l4c2K/XFw=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`name` = 'ゲスト様' AND `users`.`email` = 'guest@example.com' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:22
+Redirected to https://dazzling-app.tokyo/posts
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 36.13.134.99 at 2020-09-28 15:01:36 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 6 OFFSET 0[0m
+  ↳ app/views/posts/index.html.erb:39
+  [1m[36mActsAsTaggableOn::Tagging Load (0.7ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Post'[0m
+  ↳ app/views/posts/index.html.erb:45
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Post' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/posts/index.html.erb:45
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT `tags`.* FROM `tags`[0m
+  ↳ app/views/posts/index.html.erb:94
+  [1m[35m (16.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:113
+  Rendered posts/index.html.erb within layouts/application (44.2ms)
+Completed 200 OK in 104ms (Views: 81.9ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/users" for 36.13.134.99 at 2020-09-28 15:01:38 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:19
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 5 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:45
+  [1m[35m (31.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:57
+  Rendered users/index.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 103ms (Views: 69.6ms | ActiveRecord: 32.9ms)
+
+
+Started GET "/users/1" for 36.13.134.99 at 2020-09-28 15:01:39 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mEntry Load (0.5ms)[0m  [1m[34mSELECT `entries`.* FROM `entries` WHERE `entries`.`user_id` = 3[0m
+  ↳ app/controllers/users_controller.rb:15
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`following_id` = 1[0m
+  ↳ app/views/users/show.html.erb:25
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`following_id` WHERE `relationships`.`follower_id` = 1[0m
+  ↳ app/views/users/show.html.erb:28
+  [1m[36mRelationship Load (0.6ms)[0m  [1m[34mSELECT  `relationships`.* FROM `relationships` WHERE `relationships`.`follower_id` = 3 AND `relationships`.`following_id` = 1 LIMIT 1[0m
+  ↳ app/models/user.rb:33
+  Rendered users/_follow.html.erb (0.7ms)
+  Rendered users/_follow_form.html.erb (5.0ms)
+  [1m[36mCACHE Relationship Load (0.0ms)[0m  [1m[34mSELECT  `relationships`.* FROM `relationships` WHERE `relationships`.`follower_id` = 3 AND `relationships`.`following_id` = 1 LIMIT 1[0m
+  ↳ app/models/user.rb:33
+  Rendered users/show.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 127ms (Views: 78.4ms | ActiveRecord: 30.7ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:01:43 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 67ms (Views: 66.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/6" for 36.13.134.99 at 2020-09-28 15:01:43 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 404 Not Found in 2ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=6):
+  
+app/controllers/users_controller.rb:9:in `show'
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:01:49 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 66ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 122.215.55.98 at 2020-09-28 15:02:02 +0000
+Cannot render console from 122.215.55.98! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:24
+Completed 200 OK in 64ms (Views: 61.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:02:13 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 64ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:02:19 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 66ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:02:43 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 62ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:02:50 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 66ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:03:13 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 61ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:03:20 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 68ms (Views: 67.5ms | ActiveRecord: 0.0ms)
+
+
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/stack.rb:37: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/static.rb:111: warning: The called method `initialize' is defined here
+A server is already running. Check /home/ec2-user/dazzling3/tmp/pids/server.pid.
+=> Booting Puma
+=> Rails 5.2.4.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Exiting
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:03:43 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 63ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:03:50 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 67ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:04:13 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 63ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/edit" for 36.13.134.99 at 2020-09-28 15:04:15 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 68ms (Views: 65.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:04:20 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 66ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:04:43 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 63ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:04:50 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 66ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:05:13 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 64ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:05:20 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 66ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:05:43 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 63ms (Views: 62.7ms | ActiveRecord: 0.0ms)
+
+
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2020-09-28 15:05:49 +0000 ===
+- Goodbye!
+Exiting
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/stack.rb:37: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/static.rb:111: warning: The called method `initialize' is defined here
+=> Booting Puma
+=> Rails 5.2.4.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.6 (ruby 2.7.0-p0), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:06:20 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by TopController#home as HTML
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionview-5.2.4.3/lib/action_view/view_paths.rb:11: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionview-5.2.4.3/lib/action_view/lookup_context.rb:128: warning: The called method `template_exists?' is defined here
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (204.7ms)
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.4.3/lib/active_support/messages/rotator.rb:28: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.4.3/lib/active_support/messages/rotator.rb:6: warning: The called method `initialize' is defined here
+Completed 200 OK in 290ms (Views: 288.5ms | ActiveRecord: 0.0ms)
+
+
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/cookies.rb:647: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.4.3/lib/active_support/message_encryptor.rb:150: warning: The called method `encrypt_and_sign' is defined here
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.4.3/lib/active_support/message_encryptor.rb:175: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.4.3/lib/active_support/messages/metadata.rb:17: warning: The called method `wrap' is defined here
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:06:43 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 60ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:06:50 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 58ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:07:13 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 64ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 36.13.134.99 at 2020-09-28 15:07:19 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activemodel-5.2.4.3/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activemodel-5.2.4.3/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:24
+Completed 200 OK in 95ms (Views: 79.2ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:07:20 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 70ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 36.13.134.99 at 2020-09-28 15:07:28 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 65ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:07:43 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 71ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:07:50 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 88ms (Views: 87.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:08:13 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 98ms (Views: 97.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:08:20 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 62ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:08:43 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 62ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:08:50 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 62ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:09:13 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 65ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:09:20 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 61ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:09:43 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 62ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+2020-09-28 15:09:44 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+Started GET "/" for 142.93.200.36 at 2020-09-28 15:09:45 +0000
+Cannot render console from 142.93.200.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 72ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+
+
+2020-09-28 15:09:45 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:46 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:46 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:46 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:46 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+Started OPTIONS "/" for 142.93.200.36 at 2020-09-28 15:09:47 +0000
+Cannot render console from 142.93.200.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/"):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:22:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/request_store-1.5.0/lib/request_store/middleware.rb:19:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.4.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.4.3/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+2020-09-28 15:09:47 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:48 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:48 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:48 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:48 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:49 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:49 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:49 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:50 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:09:50 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 61ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+2020-09-28 15:09:50 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+Started GET "/nice%20ports%2C/Tri%6Eity.txt%2ebak" for 142.93.200.36 at 2020-09-28 15:09:50 +0000
+Cannot render console from 142.93.200.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/nice%20ports%2C/Tri%6Eity.txt%2Ebak"):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:22:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/request_store-1.5.0/lib/request_store/middleware.rb:19:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.4.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.4.3/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+2020-09-28 15:09:51 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:51 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:52 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:52 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:52 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:53 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:53 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:53 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:54 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:54 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:54 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:55 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:55 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:55 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:56 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:56 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:56 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:57 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:57 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2020-09-28 15:09:58 +0000: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:10:13 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 64ms (Views: 63.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:10:20 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 62ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:10:43 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 62ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:10:50 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 67ms (Views: 66.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/guest_sign_in" for 36.13.134.99 at 2020-09-28 15:11:11 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new_guest as HTML
+  Parameters: {"authenticity_token"=>"NEKz12npeGtVfxK1hMLH3DqDnEiUT97gxkWfEZ2DKACYTpM/I9vQjVS9b/TQ7R5Yyc3Pc552GCDo1uLMzT5kzw=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`name` = 'ゲスト様' AND `users`.`email` = 'guest@example.com' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:22
+Redirected to https://dazzling-app.tokyo/posts
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 36.13.134.99 at 2020-09-28 15:11:11 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 6 OFFSET 0[0m
+  ↳ app/views/posts/index.html.erb:39
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/acts-as-taggable-on-6.5.0/lib/acts_as_taggable_on/tagging.rb:9: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/associations.rb:1653: warning: The called method `belongs_to' is defined here
+  [1m[36mActsAsTaggableOn::Tagging Load (0.7ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Post'[0m
+  ↳ app/views/posts/index.html.erb:45
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/relation/delegation.rb:132: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/relation.rb:25: warning: The called method `initialize' is defined here
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Post' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/posts/index.html.erb:45
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT `tags`.* FROM `tags`[0m
+  ↳ app/views/posts/index.html.erb:94
+  [1m[35m (17.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:113
+  Rendered posts/index.html.erb within layouts/application (113.3ms)
+Completed 200 OK in 189ms (Views: 104.2ms | ActiveRecord: 68.4ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:11:13 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 62ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:11:20 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 71ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:11:43 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 62ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:11:50 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 64ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:12:13 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 64ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:12:20 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 67ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 36.13.134.99 at 2020-09-28 15:12:20 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activemodel-5.2.4.3/lib/active_model/translation.rb:67: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/i18n-1.8.3/lib/i18n.rb:195: warning: The called method `translate' is defined here
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionview-5.2.4.3/lib/action_view/helpers/form_helper.rb:755: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionview-5.2.4.3/lib/action_view/helpers/form_helper.rb:1521: warning: The called method `html_options_for_form_with' is defined here
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/abstract_controller/helpers.rb:67: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.4.3/lib/action_controller/metal/request_forgery_protection.rb:307: warning: The called method `form_authenticity_token' is defined here
+  Rendered posts/new.html.erb within layouts/application (55.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:24
+Completed 200 OK in 151ms (Views: 117.1ms | ActiveRecord: 14.2ms)
+
+
+Started POST "/posts" for 36.13.134.99 at 2020-09-28 15:12:41 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1xXvHTNsKi4iAAPl2BC86H1HMLvYcQNKI6c7ptDwrlZ7Gc/1eV6CyCPCfqSMP2VsjgljgNJIxYoNNEZ7gE3imQ==", "post"=>{"title"=>"Test Title", "content"=>"Test Content", "tag_list"=>"タグ1,タグ2", "rate"=>"3.5"}, "latitude"=>"1.1", "longitude"=>"2.2"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:81
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/transactions.rb:212: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/database_statements.rb:260: warning: The called method `transaction' is defined here
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/transaction.rb:171: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/transaction.rb:97: warning: The called method `initialize' is defined here
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:42
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:42
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `content`, `created_at`, `updated_at`, `user_id`, `rate`) VALUES ('Test Title', 'Test Content', '2020-09-28 15:12:41', '2020-09-28 15:12:41', 3, 3.5)[0m
+  ↳ app/controllers/posts_controller.rb:42
+  [1m[36mSpot Create (0.6ms)[0m  [1m[32mINSERT INTO `spots` (`created_at`, `updated_at`, `latitude`, `longitude`, `post_id`) VALUES ('2020-09-28 15:12:41', '2020-09-28 15:12:41', 1.1, 2.2, 2)[0m
+  ↳ app/controllers/posts_controller.rb:42
+  [1m[36mActsAsTaggableOn::Tag Load (4.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE (LOWER(name) = LOWER('タグ1') OR LOWER(name) = LOWER('タグ2'))[0m
+  ↳ app/controllers/posts_controller.rb:42
+  [1m[36mActsAsTaggableOn::Tag Load (10.5ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Post' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/controllers/posts_controller.rb:42
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT  `tags`.* FROM `tags` WHERE `tags`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:42
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `taggings` WHERE `taggings`.`tag_id` = 1 AND `taggings`.`taggable_type` = 'Post' AND `taggings`.`taggable_id` = 2 AND `taggings`.`context` = 'tags' AND `taggings`.`tagger_id` IS NULL AND `taggings`.`tagger_type` IS NULL LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:42
+  [1m[36mActsAsTaggableOn::Tagging Create (1.7ms)[0m  [1m[32mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `context`, `created_at`) VALUES (1, 'Post', 2, 'tags', '2020-09-28 15:12:41')[0m
+  ↳ app/controllers/posts_controller.rb:42
+  [1m[36mActsAsTaggableOn::Tag Update All (1.9ms)[0m  [1m[33mUPDATE `tags` SET `taggings_count` = COALESCE(`taggings_count`, 0) + 1 WHERE `tags`.`id` = 1[0m
+  ↳ app/controllers/posts_controller.rb:42
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT  `tags`.* FROM `tags` WHERE `tags`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:42
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `taggings` WHERE `taggings`.`tag_id` = 2 AND `taggings`.`taggable_type` = 'Post' AND `taggings`.`taggable_id` = 2 AND `taggings`.`context` = 'tags' AND `taggings`.`tagger_id` IS NULL AND `taggings`.`tagger_type` IS NULL LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:42
+  [1m[36mActsAsTaggableOn::Tagging Create (0.5ms)[0m  [1m[32mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `context`, `created_at`) VALUES (2, 'Post', 2, 'tags', '2020-09-28 15:12:41')[0m
+  ↳ app/controllers/posts_controller.rb:42
+  [1m[36mActsAsTaggableOn::Tag Update All (0.5ms)[0m  [1m[33mUPDATE `tags` SET `taggings_count` = COALESCE(`taggings_count`, 0) + 1 WHERE `tags`.`id` = 2[0m
+  ↳ app/controllers/posts_controller.rb:42
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/persistence.rb:705: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ec2-user/dazzling3/vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/timestamp.rb:105: warning: The called method `_update_record' is defined here
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:43
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE (LOWER(name) = LOWER('タグ1') OR LOWER(name) = LOWER('タグ2'))[0m
+  ↳ app/controllers/posts_controller.rb:43
+  [1m[36mActsAsTaggableOn::Tag Load (2.0ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Post' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/controllers/posts_controller.rb:43
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:43
+Redirected to https://dazzling-app.tokyo/posts
+Completed 302 Found in 125ms (ActiveRecord: 34.1ms)
+
+
+Started GET "/posts" for 36.13.134.99 at 2020-09-28 15:12:41 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 6 OFFSET 0[0m
+  ↳ app/views/posts/index.html.erb:39
+  [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Post'[0m
+  ↳ app/views/posts/index.html.erb:45
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Post' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/posts/index.html.erb:45
+  [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Post'[0m
+  ↳ app/views/posts/index.html.erb:45
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Post' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  ↳ app/views/posts/index.html.erb:45
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT `tags`.* FROM `tags`[0m
+  ↳ app/views/posts/index.html.erb:94
+  [1m[35m (16.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:113
+  Rendered posts/index.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 92ms (Views: 70.2ms | ActiveRecord: 20.8ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:12:43 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 73ms (Views: 72.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/2" for 36.13.134.99 at 2020-09-28 15:12:46 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:17
+  [1m[36mSpot Load (0.6ms)[0m  [1m[34mSELECT  `spots`.* FROM `spots` WHERE `spots`.`post_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:21
+  Rendering posts/show.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `favorites` WHERE `favorites`.`post_id` = 2[0m
+  ↳ app/views/posts/show.html.erb:37
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/favorites/_favorite.html.erb:2
+  [1m[36mFavorite Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `favorites` WHERE `favorites`.`user_id` = 3 AND `favorites`.`post_id` = 2 LIMIT 1[0m
+  ↳ app/models/user.rb:28
+  Rendered favorites/_favorite.html.erb (4.5ms)
+  Rendered comments/_form.html.erb (1.1ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 2[0m
+  ↳ app/views/comments/_index.html.erb:1
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT  `comments`.* FROM `comments` WHERE `comments`.`post_id` = 2 ORDER BY `comments`.`id` ASC LIMIT 2[0m
+  ↳ app/views/comments/_index.html.erb:3
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`post_id` = 2 LIMIT 18446744073709551615 OFFSET 2[0m
+  ↳ app/views/comments/_index.html.erb:31
+  Rendered comments/_index.html.erb (4.4ms)
+  Rendered posts/show.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 121ms (Views: 73.8ms | ActiveRecord: 31.0ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:12:50 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 72ms (Views: 71.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.0.133 at 2020-09-28 15:13:13 +0000
+Cannot render console from 10.0.0.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 63ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 36.13.134.99 at 2020-09-28 15:13:18 +0000
+Cannot render console from 36.13.134.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:24
+Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.1.17 at 2020-09-28 15:13:20 +0000
+Cannot render console from 10.0.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#home as HTML
+  Rendering top/home.html.erb within layouts/application
+  Rendered top/home.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 64ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2020-09-28 15:13:26 +0000 ===
+- Goodbye!
+Exiting

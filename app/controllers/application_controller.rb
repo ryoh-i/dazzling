@@ -16,6 +16,17 @@ class ApplicationController < ActionController::Base
     posts_path
   end
 
+  # Get /users/guest_sign_in
+  # ゲストログイン機能時のアクション
+  def new_guest
+    user = User.find_or_create_by!(name: 'ゲスト様', email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+    end
+    sign_in user
+    flash[:notice] = 'ゲストとしてログインされました'
+    redirect_to posts_path
+  end
+
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   protected
