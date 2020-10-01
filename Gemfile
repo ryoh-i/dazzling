@@ -22,7 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # original gem
 gem 'acts-as-taggable-on', '~> 6.0'
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.3.1'
 gem 'carrierwave'
 gem 'devise'
 gem 'dotenv-rails'
