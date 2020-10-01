@@ -39,6 +39,7 @@
                           PATCH  /posts/:id(.:format)                                                                     posts#update
                           PUT    /posts/:id(.:format)                                                                     posts#update
                           DELETE /posts/:id(.:format)                                                                     posts#destroy
+                  shindan GET    /shindan(.:format)                                                                       posts#shindan
             relationships POST   /relationships(.:format)                                                                 relationships#create
              relationship DELETE /relationships/:id(.:format)                                                             relationships#destroy
                  messages POST   /messages(.:format)                                                                      messages#create
