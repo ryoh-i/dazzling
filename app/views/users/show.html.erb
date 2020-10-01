@@ -6,7 +6,7 @@
   <!--  <h1 class="post__title__font">口コミ一覧(ホーム）</h1>-->
   <p class="post_title_guide">
     このページでは、自分及び登録ユーザーのプロフィールを閲覧できます。<br>
-    また、フォロワー同士であればダイレクトメッセージを送ることができます。
+    また、フォロワー同士であればダイレクトメッセージを送ることができます。<br>
   </p>
 </div>
 
@@ -53,7 +53,9 @@
   <!--お互いにフォローされていれば、true-->
   <% if (current_user.following? @user) && (@user.following? current_user) %>
     <% if @isRoom == true %>
-      <p class="user-show-room"><a href="/rooms/<%= @roomId %>" class="btn btn-primary btn-lg">チャットへ</a>
+      <div class="follow___btn">
+        <p class="user-show-room"><a href="/rooms/<%= @roomId %>" class="">チャットへ</a>
+      </div>
     <% else %>
       <!--一旦、form_forで実装するが、後程form_withで実装する-->
       <%= form_for @room do |f| %>

@@ -75,6 +75,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def shindan
+
+  end
+
   private
 
   def post_params
