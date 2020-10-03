@@ -5,7 +5,7 @@
 ![スクリーンショット 2020-09-22 5 40 10（2）](https://user-images.githubusercontent.com/55808655/93819108-44ee8e00-fc96-11ea-864b-c0ac34cf7ea8.png)
 
 ## URL
-AWSへデプロイ作業中、近日公開
+https://dazzling-app.tokyo/
 
 ## 概要
 HOME画面の左端及び下部分に"ゲストログイン"のボタンを押下することでアカウントを作成することなく、ゲストユーザーとして、ログインすることができます。
