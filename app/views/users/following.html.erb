@@ -1,8 +1,51 @@
-<% @user.following.each do |user| %>
-  <table>
-    <tr>
-      <td>  <%= user.name %> </td>
-      <td><%= link_to '詳細', user_path(user) %></td>
-    </tr>
-  </table>
-<% end %>
+<!--suppress ALL -->
+
+<!--タイトル-->
+<div class="post__title">
+  <div class="balloon">フォロワー一覧</div>
+  <!--  <h1 class="post__title__font">口コミ一覧(ホーム）</h1>-->
+  <p class="post_title_guide">
+    このページでは、自分がフォローしているユーザーがみれます<br>
+    ユーザー名をクリックすると詳細ページに遷移することができます。
+  </p>
+</div>
+<!--タイトル-->
+
+<!--上部メニュー-->
+<menu class="post__menu">
+  <ul class="post__menu__list">
+    <%= link_to "口コミ一覧", posts_path, class: "post__menu__list__li li-active" %>
+    <li class="post__menu__list__li">お気に入り</li>
+    <li class="post__menu__list__li">フォロー</li>
+    <%= link_to "フォロワー", followers_user_path(@user.id), class: "post__menu__list__li li-active" %>
+    <%= link_to "新規投稿", new_post_path, class: "post__menu__list__button" %>
+  </ul>
+
+  <!--キーワード絞り込み機能フォーム-->
+  <div class="post__form">
+    <figure class="post__form__search-border"></figure>
+    <%= form_tag(posts_path, :method => 'get', class: "active-cyan-4", style: "display: flex") do %>
+      <%= text_field_tag(:search, '', class: "form-control w-100", placeholder: "キーワードで口コミを検索...") %>
+      <%= button_tag '<i class="fa fa-search"></i>'.html_safe, :type => "submit", :class => "btn btn-default btn-s-md post__form__search-button" %>
+    <% end %>
+  </div>
+  <!--キーワード絞り込み機能フォームここまで-->
+</menu>
+<!--上部メニューここまで-->
+
+<!--口コミ投稿一覧メイン-->
+<div class="container-wrapper">
+  <div class="left-container">
+    <% @user.following.each do |user| %>
+      <article class="article__userindex">
+        <div class="article-container__main">
+          <!--タイトル＆本文表示＆更新時間表示＆タグ表示-->
+          <h4><%= link_to(user.name, user_path(user)) %></h4>
+          <p><%= user.profile %></p>
+          <!--タイトル＆本文表示＆更新時間表示＆タグ表示ここまで-->
+        </div>
+      </article>
+    <% end %>
+  </div>
+</div>
+<!--口コミ投稿一覧メインここまで-->

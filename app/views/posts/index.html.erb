@@ -83,7 +83,8 @@
         <%= image_tag 'default.jpg', class: 'avatar' %>
       <% end %>
       <span class="right-container__profile__name"><%= current_user.name %></span>
-      <span class="right-container__profile__follow">フォロワー 100人</span>
+      <span class="right-container__profile__follow"><%= link_to "フォロワー#{current_user.followers.count}人", followers_user_path(current_user.id), class: "post__menu__list__li li-active" %></span>
+
       <%= link_to "プロフィール詳細", user_path(current_user), class: "post__menu__list__button right-container__profile__button" %>
     </div>
 
