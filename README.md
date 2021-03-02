@@ -1,4 +1,4 @@
-# dazzling ※※10月28日水曜現在、サーバーが停止していた件については復旧済みです※※
+# dazzling ※※3月2日火曜現在、AWS EC２を稼働させていません※
 舞台観劇を通して繋がる、簡単な口コミサービスです。
 
 ![dazzling_home](https://user-images.githubusercontent.com/55808655/93812414-8a0dc280-fc8c-11ea-8033-9996d6f8d8d2.png)
